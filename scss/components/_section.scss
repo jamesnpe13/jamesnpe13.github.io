@@ -1,0 +1,191 @@
+@use "../abstracts/variables" as vars;
+@use "../abstracts/colors" as cols;
+@use "../abstracts/debug" as db;
+@use "../abstracts/effects" as fx;
+
+section {
+   position: relative;
+   display: grid;
+   grid-template-columns: repeat(14, 1fr);
+   align-items: center;
+
+   .content-container {
+      margin: vars.$section-padding;
+      grid-column: 3 / 13;
+      grid-row: 1 / 2;
+      display: grid;
+      grid-template-columns: repeat(10, 1fr);
+
+      gap: vars.$inline-gap;
+
+      .panel {
+         display: flex;
+         flex-direction: column;
+         align-items: flex-start;
+         justify-content: center;
+      }
+      .panel:first-child {
+         grid-column: 1 / 6;
+      }
+      .panel:last-child {
+         grid-column: 6 / -1;
+      }
+   }
+   & > .background {
+      width: 100%;
+      z-index: -5;
+      grid-column: 1 / -1;
+      grid-row: 1 / 2;
+   }
+
+   // sections
+   &.hero {
+      height: 100vh;
+      .content-container .panel:first-child {
+         grid-column: 1 / 6;
+
+         & > *:nth-child(1) {
+            margin-top: 0;
+            margin-bottom: vars.$block-gap;
+         }
+         & > *:nth-child(2) {
+            margin-top: 0;
+            margin-bottom: -1.2vw;
+         }
+         & > *:nth-child(3) {
+            margin-top: 0;
+            margin-bottom: vars.$block-gap;
+         }
+         & > *:nth-child(4) {
+            margin-top: 0;
+            // margin-bottom: vars.$block-gap;
+         }
+      }
+      .content-container .panel:last-child {
+         grid-column: 6 / -1;
+
+         img {
+            opacity: 0.65;
+         }
+      }
+   }
+
+   &.fourteen-years {
+      .content-container {
+         margin: 0 0;
+         height: 60%;
+      }
+      .panel:first-child {
+         transform: translate(0, 100px);
+      }
+      .panel:last-child {
+         position: relative;
+         img {
+            position: absolute;
+            scale: 0.8;
+            transform: translateY(-7%);
+         }
+      }
+   }
+
+   &.story {
+      z-index: 1;
+      .content-container {
+         margin: 0;
+         margin-top: 100px;
+         grid-template-columns: 1fr;
+         grid-template-rows: 2fr;
+         gap: 100px;
+      }
+      .panel {
+         justify-content: center;
+         align-items: center;
+         &:first-child {
+            grid-column: 1 / -1;
+            grid-row: 1 / 2;
+         }
+         &:last-child {
+            grid-column: 1 / -1;
+            grid-row: 2 / -1;
+
+            flex-direction: row;
+            justify-content: space-between;
+         }
+      }
+   }
+
+   &.work-together {
+      translate: 0 -100px;
+
+      .content-container {
+         translate: 0 40px;
+         height: 70%;
+         align-items: flex-start;
+      }
+      .panel {
+         &:first-child {
+            justify-content: center;
+            align-items: flex-start;
+            img {
+               width: 90%;
+               translate: 0 80px;
+            }
+         }
+      }
+   }
+
+   &.products {
+      .content-container {
+         margin: 0;
+         margin-top: 80px;
+         grid-template-columns: 1fr;
+         grid-template-rows: 2fr;
+         gap: 100px
+      }
+      .panel {
+         justify-content: center;
+         align-items: center;
+         &:first-child {
+            grid-column: 1 / -1;
+            grid-row: 1 / 2;
+         }
+         &:last-child {
+            grid-column: 1 / -1;
+            grid-row: 2 / -1;
+
+            flex-direction: row;
+            justify-content: space-between;
+         }
+      }
+   }
+
+   &.shop-all {
+    z-index: 1;
+    margin-top: 50px;
+    .content-container {
+       margin: 0;
+       margin-top: 40px;
+       display: grid;
+       grid-template-columns: 1fr;
+    }
+    .panel {
+       justify-content: center;
+       align-items: center;
+       &:first-child {
+          grid-column: 1 / -1;
+          grid-row: 1 / 2;
+       }
+    }
+ }
+}
+
+footer {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    background-color: cols.$primary-grey;
+    .background {
+        position: absolute;
+        bottom: 0;
+    }
+}

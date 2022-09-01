@@ -1,0 +1,16 @@
+@mixin self {
+    outline: 5px solid yellowgreen;
+}
+@mixin ch {
+    & > * {
+        outline: 1px solid blue;
+    }
+}
+@mixin all {
+    * {
+        outline: 1px solid blue;
+    }
+    & {
+        outline: 5px solid yellowgreen;
+    }
+}
