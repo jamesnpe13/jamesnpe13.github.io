@@ -1,0 +1,74 @@
+@use "../abstracts/debug" as db;
+
+section {
+   &.gallery {
+      .content-container {
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+         gap: 100px;
+         & > div {
+            display: flex;
+            align-items: center;
+            width: 100%;
+
+            &:first-child {
+               flex-direction: column;
+               justify-content: center;
+            }
+            &:nth-child(n + 2) {
+               flex-direction: row;
+               justify-content: space-evenly;
+            }
+         }
+      }
+      .background {
+         z-index: -100;
+         position: absolute;
+         top: 0;
+      }
+   }
+
+   //    image adjust
+   &.accessories {
+    margin-bottom: 100px;
+      .panel {
+         img {
+            width: 50%;
+            translate: -8px 35px;
+         }
+         .card-b:nth-child(2) {
+            img {
+               filter: hue-rotate(180deg);
+            }
+         }
+         .card-b:nth-child(3) {
+            img {
+               filter: hue-rotate(310deg);
+            }
+         }
+      }
+   }
+   &.packaging {
+    margin-bottom: 100px;
+      .panel {
+         img {
+            width: 45%;
+            translate: -15px 10px;
+         }
+         .card-b:nth-child(2) {
+            img {
+               filter: hue-rotate(180deg);
+            }
+         }
+         .card-b:nth-child(3) {
+            img {
+               filter: hue-rotate(310deg);
+            }
+         }
+      }
+   }
+   &.featured {
+    margin-bottom: 100px;
+   }
+}
