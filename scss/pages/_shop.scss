@@ -1,74 +1,52 @@
+@use "../abstracts/variables" as vars;
 @use "../abstracts/debug" as db;
+@use "../abstracts/gapsets" as gs;
+@use "../abstracts/mixins" as mx;
+@use "../abstracts/colors" as cols;
+@use "../abstracts/mediaqueries" as mq;
 
-section {
-   &.gallery {
-      .content-container {
-         display: flex;
-         flex-direction: column;
-         align-items: center;
-         gap: 100px;
-         & > div {
-            display: flex;
-            align-items: center;
-            width: 100%;
+main.shop {
+   section {
+      .panel:first-child {
+         @include gs.section-heading-gap-set;
+      }
 
-            &:first-child {
-               flex-direction: column;
-               justify-content: center;
-            }
-            &:nth-child(n + 2) {
-               flex-direction: row;
-               justify-content: space-evenly;
+      &.gallery {
+         @include mq.medium {
+            .panel {
+               &:first-child {
+                  h2.bold {
+                     color: cols.$grey-3;
+                  }
+                  h2 {
+                     color: cols.$grey-2;
+                  }
+               }
             }
          }
-      }
-      .background {
-         z-index: -100;
-         position: absolute;
-         top: 0;
-      }
-   }
+         .content-container {
+            gap: 80px;
+         }
 
-   //    image adjust
-   &.accessories {
-    margin-bottom: 100px;
+         .background {
+            @include mx.bg-detach();
+         }
+      }
+      &.single {
+         @include mq.medium {
+            background: cols.$primary-orange;
+         }
+      }
+
       .panel {
-         img {
-            width: 50%;
-            translate: -8px 35px;
-         }
-         .card-b:nth-child(2) {
-            img {
-               filter: hue-rotate(180deg);
+         .card-b {
+            &:nth-child(2) {
+               filter: hue-rotate(160deg);
             }
-         }
-         .card-b:nth-child(3) {
-            img {
-               filter: hue-rotate(310deg);
+            &:nth-child(3) {
+               filter: hue-rotate(300deg);
             }
          }
       }
-   }
-   &.packaging {
-    margin-bottom: 100px;
-      .panel {
-         img {
-            width: 45%;
-            translate: -15px 10px;
-         }
-         .card-b:nth-child(2) {
-            img {
-               filter: hue-rotate(180deg);
-            }
-         }
-         .card-b:nth-child(3) {
-            img {
-               filter: hue-rotate(310deg);
-            }
-         }
-      }
-   }
-   &.featured {
-    margin-bottom: 100px;
    }
 }

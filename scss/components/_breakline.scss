@@ -2,7 +2,6 @@
 @use "../abstracts/variables" as vars;
 
 .breakline {
-   @include vars.wide-spacing();
    background-color: cols.$primary-orange;
    width: 140px;
    height: 15px;

@@ -19,11 +19,19 @@ $black: 800;
 
    // hero
    h1 {
-      font-size: 4vw;
-      font-weight: $regular;
+      &.reg {
+         font-size: 4vw;
+         font-weight: $regular;
+         height: 3.5vw;
+         line-height: 2.4vw;
+
+         
+      }
       &.bold {
          font-weight: $semibold;
          font-size: 5.1vw;
+         height: 4vw;
+         line-height: 3.5vw;
       }
       &.sub {
          font-weight: $regular;
@@ -37,13 +45,9 @@ $black: 800;
       font-weight: $light;
       width: 600px;
       text-align: center;
-
-      @include vars.medium-spacing();
       &.bold {
          font-size: 3em;
          font-weight: $medium;
-
-         @include vars.medium-spacing();
       }
    }
 
@@ -51,37 +55,27 @@ $black: 800;
    h3 {
       font-size: 3em;
       font-weight: $regular;
-
-      @include vars.wide-spacing();
    }
    h3.sub {
       font-size: 1.5em;
       font-weight: $regular;
       width: 400px;
-
-      @include vars.wide-spacing();
    }
    p.article {
       font-size: 1em;
       font-weight: $regular;
       width: 400px;
       line-height: 1.5em;
-
-      @include vars.wide-spacing();
    }
 
    // card
    h4 {
       font-size: 1.5em;
       font-weight: $medium;
-
-      @include vars.narrow-spacing();
    }
    p.card {
       font-size: 0.9em;
       font-weight: $regular;
-
-      @include vars.narrow-spacing();
    }
 
    // nav bar

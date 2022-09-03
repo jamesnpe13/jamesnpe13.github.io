@@ -21,7 +21,7 @@
          <a href="./" class="logo-container">
             <img src="./images/logo-2.svg" alt="" />
          </a>
-         <nav>
+         <nav class="desktop">
             <a href="./shop.html">Shop</a>
             <a href="./about.html">About</a>
             <a href="">Supply</a>
@@ -30,14 +30,21 @@
             <a href="">Login</a>
             <a class="cart-link" href=""><img src="./images/cart-icon.svg" alt="" /></a>
          </nav>
+         <nav class="mobile">
+            <div class="hamburger">
+               <div></div>
+               <div></div>
+               <div></div>
+            </div>
+         </nav>
       </header>
 
       <!-- main -->
-      <main>
+      <main class="shop">
          <!-- featured -->
          <section class="featured gallery">
             <div class="content-container">
-               <div>
+               <div class="panel">
                   <h2 class="bold white">Popular Products</h2>
                   <h2 class="pale-orange">We picked out some of our customer favourites</h2>
                </div>
@@ -90,15 +97,13 @@
             </div>
 
             <!-- background -->
-            <div class="background">
-               <img src="./images/backgrounds/shop-bg-reusable.svg" alt="" />
-            </div>
+            <img class="background" src="./images/backgrounds/shop-bg-reusable.svg" alt="" />
          </section>
 
          <!-- Coffee beans -->
          <section class="beans gallery">
             <div class="content-container">
-               <div>
+               <div class="panel">
                   <h2 class="bold white">Corrupt Coffee Beans</h2>
                   <h2 class="pale-orange">A variety of blends to suit your taste</h2>
                </div>
@@ -147,10 +152,6 @@
                         </div>
                      </div>
                   </div>
-               </div>
-               <!-- panel -->
-               <div class="panel">
-                  <!-- card-A -->
                   <div class="card-b reveal">
                      <div>
                         <img src="./images/vicious-blend-mockup-1.png" alt="" />
@@ -196,15 +197,13 @@
             </div>
 
             <!-- background -->
-            <div class="background">
-               <img src="./images/backgrounds/shop-bg-reusable.svg" alt="" />
-            </div>
+            <img class="background" src="./images/backgrounds/shop-bg-reusable.svg" alt="" />
          </section>
 
          <!-- barista accessories -->
          <section class="accessories gallery">
             <div class="content-container">
-               <div>
+               <div class="panel">
                   <h2 class="bold white">Barista Accessories</h2>
                   <h2 class="pale-orange">Pro tools for pro baristas</h2>
                </div>
@@ -257,15 +256,13 @@
             </div>
 
             <!-- background -->
-            <div class="background">
-               <img src="./images/backgrounds/shop-bg-reusable.svg" alt="" />
-            </div>
+            <img class="background" src="./images/backgrounds/shop-bg-reusable.svg" alt="" />
          </section>
 
          <!-- packaging -->
          <section class="packaging gallery">
             <div class="content-container">
-               <div>
+               <div class="panel">
                   <h2 class="bold white">Packaging Needs</h2>
                   <h2 class="pale-orange">Good for you and great for the planet</h2>
                </div>
@@ -324,9 +321,9 @@
          </section>
 
          <!-- special order -->
-         <section class="special gallery">
+         <section class="special single">
             <div class="content-container">
-               <div>
+               <div class="panel">
                   <h2 class="bold white">Special order?</h2>
                   <h2 class="pale-orange">Give us a call to arrange specialised orders</h2>
                   <a href="./shop.html" class="button white"><span>Contact us</span></a>
@@ -334,9 +331,7 @@
             </div>
 
             <!-- background -->
-            <div class="background">
-               <img src="./images/backgrounds/discover-more.svg" alt="" />
-            </div>
+            <img class="background" src="./images/backgrounds/discover-more.svg" alt="" />
          </section>
       </main>
 

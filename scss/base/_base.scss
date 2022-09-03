@@ -1,13 +1,13 @@
 // base
 @use "./reset";
-@use "./responsive";
-@use "./mixins";
 @use "./animations";
+@use "./layouts";
 
 // components
 @use "../components/header";
 @use "../components/footer";
-@use "../components/section";
+@use "../components/hamburger";
+// @use "../components/section";
 
 @use "../components/card-gallery";
 @use "../components/cards";
@@ -21,11 +21,14 @@
 @use "../abstracts/typography" as type;
 @use "../abstracts/variables" as vars;
 @use "../abstracts/effects" as fx;
+@use "../abstracts/gapsets" as gs;
+@use "../abstracts/mixins" as mx;
+@use "../abstracts/mediaqueries" as mq;
 
 // pages
 @use "../pages/index";
 @use "../pages/shop";
-@use "../pages/about";
+// @use "../pages/about";
 
 // font set
 @include type.font-set();
