@@ -2,7 +2,6 @@
 @use "../abstracts/variables" as vars;
 @use "../abstracts/typography" as type;
 @use "../abstracts/mediaqueries" as mq;
-@use "../abstracts/effects" as fx;
 
 header {
    position: fixed;
@@ -33,7 +32,7 @@ header {
          height: 50%;
          filter: brightness(100);
          @include mq.medium {
-            @include fx.glass();
+            filter: brightness(3) grayscale(1);
             height: 35%;
          }
       }
@@ -65,15 +64,11 @@ header {
          flex-direction: column;
          gap: 5px;
          padding: 5px;
-         cursor: pointer;
          div {
             width: 30px;
             height: 3px;
             background-color: cols.$grey-3;
          }
-      }
-      .menu-overlay {
-         position: absolute;
       }
    }
 }

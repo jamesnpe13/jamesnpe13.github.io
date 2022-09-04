@@ -1,0 +1,52 @@
+@use "../abstracts/variables" as vars;
+@use "../abstracts/debug" as db;
+@use "../abstracts/gapsets" as gs;
+@use "../abstracts/mixins" as mx;
+@use "../abstracts/colors" as cols;
+@use "../abstracts/mediaqueries" as mq;
+
+main.shop {
+   section {
+      .panel:first-child {
+         @include gs.section-heading-gap-set;
+      }
+
+      &.gallery {
+         @include mq.medium {
+            .panel {
+               &:first-child {
+                  h2.bold {
+                     color: cols.$grey-3;
+                  }
+                  h2 {
+                     color: cols.$grey-2;
+                  }
+               }
+            }
+         }
+         .content-container {
+            gap: 80px;
+         }
+
+         .background {
+            @include mx.bg-detach();
+         }
+      }
+      &.single {
+         @include mq.medium {
+            background: cols.$primary-orange;
+         }
+      }
+
+      .panel {
+         .card-b {
+            &:nth-child(2) {
+               filter: hue-rotate(160deg);
+            }
+            &:nth-child(3) {
+               filter: hue-rotate(300deg);
+            }
+         }
+      }
+   }
+}

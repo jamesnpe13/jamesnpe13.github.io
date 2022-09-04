@@ -7,7 +7,6 @@
 @use "../components/header";
 @use "../components/footer";
 @use "../components/hamburger";
-@use "../components/menu-overlay";
 // @use "../components/section";
 
 @use "../components/card-gallery";
@@ -29,7 +28,7 @@
 // pages
 @use "../pages/index";
 @use "../pages/shop";
-@use "../pages/product-1";
+// @use "../pages/about";
 
 // font set
 @include type.font-set();

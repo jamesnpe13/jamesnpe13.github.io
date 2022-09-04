@@ -115,6 +115,8 @@ footer {
       bottom: 0;
 
       z-index: 1;
-      
+      @include mq.medium {
+         display: none;
+      }
    }
 }

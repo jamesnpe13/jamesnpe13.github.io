@@ -1,0 +1,10 @@
+@use "../abstracts/variables" as vars;
+
+input[type="text"] {
+   height: 50px;
+   width: 390px;
+   border-radius: vars.$border-radius;
+   border: none;
+   font-size: 1em;
+   padding-left: 20px;
+}

@@ -1,0 +1,36 @@
+@use "../abstracts/variables" as vars;
+@use "../abstracts/debug" as db;
+@use "../abstracts/gapsets" as gs;
+@use "../abstracts/mixins" as mx;
+@use "../abstracts/colors" as cols;
+@use "../abstracts/mediaqueries" as mq;
+@use "../abstracts/effects" as fx;
+
+.menu-overlay {
+   background-color: rgb(24, 24, 24);
+   top: 0;
+   right: 0;
+   display: none;
+   flex-direction: column;
+   width: 300px;
+   height: 100vh;
+   gap: 8px;
+   padding: 0 25px;
+
+   a {
+      color: white;
+      font-size: 1.3em;
+   }
+   .close {
+      filter: invert(1);
+      width: 35px;
+      align-self: flex-end;
+      margin-bottom: 50px;
+   }
+   //    hidden
+   &.open {
+      display: flex;
+      opacity: 1;
+      transform: translate(0, 0);
+   }
+}

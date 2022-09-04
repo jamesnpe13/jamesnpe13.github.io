@@ -1,0 +1,28 @@
+// paddings
+$narrow-padding: 0 150px;
+
+// section paddings
+$section-padding: 100px 0;
+
+// gaps
+$nav-gap: 50px;
+$inline-gap: 20px;
+$block-gap: 40px;
+$heading-gap: 20px;
+
+// border radius
+$border-radius: 5px;
+
+// spacing sets
+$wide: 50px;
+$medium: 20px;
+$narrow: 15px;
+@mixin wide-spacing {
+   margin-bottom: $wide;
+}
+@mixin medium-spacing {
+   margin-bottom: $medium;
+}
+@mixin narrow-spacing {
+   margin-bottom: $narrow;
+}
