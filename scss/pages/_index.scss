@@ -10,15 +10,16 @@ main.index {
    section {
       &.hero {
          // section code
-         
+
          height: 100vh;
          .content-container {
-            
             // container code
             .panel {
-               
                // panel code
                &:first-child {
+                  @include mq.small() {
+                     grid-row: 2 / 3;
+                  }
                   h1.sub {
                      margin-bottom: vars.$medium;
                   }
@@ -27,6 +28,11 @@ main.index {
                   }
                   h1.bold {
                      margin-bottom: vars.$wide;
+                  }
+               }
+               &:last-child {
+                  @include mq.small() {
+                     grid-row: 1 / 2;
                   }
                }
             }
@@ -46,11 +52,17 @@ main.index {
                      @include mq.medium {
                         transform: translateY(0);
                      }
+                     @include mq.small {
+                        grid-row: 2 / 3;
+                     }
                   }
 
                   @include gs.article-gap-set();
                }
                &:last-child {
+                  @include mq.small {
+                     grid-row: 1 / 2;
+                  }
                   img {
                      width: 70%;
                   }

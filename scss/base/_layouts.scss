@@ -24,6 +24,8 @@ section {
    width: 100%;
    display: grid;
    grid-template-columns: 2fr 12fr 2fr;
+   
+   
    align-items: center;
    justify-content: center;
    height: auto;
@@ -68,6 +70,9 @@ section {
       .content-container {
          // container code
          grid-template-columns: 1fr 1fr;
+         @include mq.medium {
+            grid-template-columns: 1fr;
+         }
       }
    }
 
@@ -90,6 +95,9 @@ section {
                flex-wrap: wrap;
                column-gap: $grid-gap;
                row-gap: $grid-gap + 50px;
+               @include mq.small {
+                  flex-direction: column;
+               }
             }
          }
       }

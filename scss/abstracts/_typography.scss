@@ -1,6 +1,7 @@
 // abstracts
 @use "./colors" as cols;
 @use "./variables" as vars;
+@use "./mediaqueries" as mq;
 
 // font weight
 $light: 300;
@@ -48,6 +49,11 @@ $black: 800;
       &.bold {
          font-size: 3em;
          font-weight: $medium;
+
+      }
+      @include mq.small {
+         width: auto;
+         font-size: 1.2em;
       }
    }
 

@@ -28,6 +28,10 @@ footer {
          grid-template-columns: repeat(5, 1fr);
          grid-template-rows: 1fr 1fr 50px;
       }
+      @include mq.small {
+         grid-template-columns: 1fr 3fr 1fr;
+         grid-template-rows: auto auto auto auto 50px;
+      }
 
       & > div:nth-child(1) {
          grid-column: 2 / 8;
@@ -38,6 +42,10 @@ footer {
          @include mq.medium {
             grid-column: 2 / 5;
             grid-row: 2 / 3;
+         }
+         @include mq.small {
+            grid-column: 2 / 3;
+            grid-row: 4 / 5;
          }
 
          & > div:nth-child(2) {
@@ -63,6 +71,10 @@ footer {
             grid-column: 2 / 3;
             grid-row: 1 / 2;
          }
+         @include mq.small {
+            grid-column: 2 / 3;
+            grid-row: 1 / 2;
+         }
       }
       & > div:nth-child(3) {
          grid-column: 10 / 12;
@@ -71,6 +83,10 @@ footer {
             grid-column: 3 / 4;
             grid-row: 1 / 2;
          }
+         @include mq.small {
+            grid-column: 2 / 3;
+            grid-row: 2 / 3;
+         }
       }
       & > div:nth-child(4) {
          grid-column: 12 / 14;
@@ -78,6 +94,10 @@ footer {
          @include mq.medium {
             grid-column: 4 / 5;
             grid-row: 1 / 2;
+         }
+         @include mq.small {
+            grid-column: 2 / 3;
+            grid-row: 3 / 4;
          }
       }
       & > div:nth-child(5) {
@@ -89,6 +109,10 @@ footer {
          @include mq.medium {
             grid-column: 2 / 5;
             grid-row: 3 / -1;
+         }
+         @include mq.small {
+            grid-column: 2 / 3;
+            grid-row: 5 / 6;
          }
          img {
             height: 60%;
@@ -113,8 +137,7 @@ footer {
       grid-row: 1 / -1;
       position: absolute;
       bottom: 0;
-
-      z-index: 1;
       
+      z-index: 1;
    }
 }
