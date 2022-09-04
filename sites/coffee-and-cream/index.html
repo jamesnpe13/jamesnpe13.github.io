@@ -3,238 +3,223 @@
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=, initial-scale=1.0" />
-    <title>Little King Cafe - Home</title>
-    <link rel="stylesheet" href="css/styles.css" />
-    <!-- fonts -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- google fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Pragati+Narrow:wght@400;700&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Special+Elite&display=swap"
       rel="stylesheet"
     />
+    <!-- css -->
+    <link rel="stylesheet" href="css/styles.css" />
+    <title>Ed Sheeran - Homepage</title>
   </head>
   <body>
-    <a id="top"></a>
-    <!-- to top button -->
-    <a href="#top" id="totopbutton">
-      <img src="images/totopicon.png" alt="" />
-    </a>
-    <!-- top navbar -->
-    <div class="section" id="homepage-navbarsection">
-      <nav id="top-navbar">
-        <a href="index.html">HOME</a>
-        <a href="menu.html">MENU</a>
-        <a href="about.html">ABOUT</a>
-        <a href="contact.html#contactsection">CONTACT</a>
-        <a href="contact.html#contact-reservationsection" class="boxedbutton"
-          >RESERVATION</a
-        >
+    <!-- header bar -->
+    <div class="headerbar">
+      <nav>
+        <a href="">TOUR</a>
+        <a href="">NEWS</a>
+        <a href="">STORE</a>
+        <a href="">MERCH</a>
+        <a href="">SUBSCRIBE</a>
       </nav>
-      <!-- icons -->
-      <div class="navicons">
-        <a href="index.html"><img src="images/icons/home.png" alt="" /></a>
-        <a href="menu.html"><img src="images/icons/menu.png" alt="" /></a>
-        <a href="about.html"><img src="images/icons/about.png" alt="" /></a>
-        <a href="contact.html#contactsection"
-          ><img src="images/icons/contact.png" alt=""
-        /></a>
-        <a href="contact.html#contact-reservationsection"
-          ><img src="images/icons/reservation.png" alt=""
-        /></a>
-      </div>
     </div>
-    <!-- splash section -->
-    <div class="section" id="homepage-splashsection">
-      <div class="middlepanel">
+    <!-- section 1 - splash image -->
+    <section class="section" id="homepage-section1">
+      <h2>ED SHEERAN</h2>
+      <div class="imagecontainer">
+        <img src="images/bg-3.png" alt="homepage splash image" class="splash" />
         <img
-          src="images/splashlogo.png"
-          alt="splashlogo"
-          id="homepage-splashimage"
+          src="images/logo-white-transparent.png"
+          alt="white logo transparent"
+          class="logo"
         />
       </div>
-    </div>
-    <!-- promotional section 1 -->
-    <div class="section" id="homepage-promotion1">
-      <div class="middlepanel">
-        <img src="images/photos/promotion1.jpg" alt="" />
+    </section>
+    <!-- album -->
+    <section class="section" id="album">
+    
+      <img src="images/album-cover.jpg" alt="album" />
+      <div class="container">
+          <h2>NEW ALBUM</h2>
+        <p>
+          Ed's fourth studio album '=' is out now everywhere! Go stream it,
+          download it or get yourself a CD or vinyl from his official store
+          here. Alongside the album Ed has also dropped a music video for his
+          new single 'Overpass Graffiti'. Check it out on his YouTube channel
+          here.
+        </p>
       </div>
-    </div>
-    <!-- about section -->
-    <div class="section" id="homepage-aboutsection">
-      <div class="leftpanel">
-        <article class="article1">
-          <h3>OUR CAFE</h3>
-          <div class="breakline">
-            <div class="box1"></div>
-            <div class="box2"></div>
-            <div class="box1"></div>
-            <div class="box2"></div>
+    </section>
+    <!-- section 2 - tours -->
+    <section class="section" id="homepage-section2">
+      <h2>TOUR</h2>
+      <div class="breakline"></div>
+      <div class="grid">
+        <!-- 1 -->
+        <div class="row">
+          <div class="date">
+            <div class="container">
+              <div class="accent"></div>
+              <p class="month">APR</p>
+              <p class="day">23</p>
+              <p class="year">2022</p>
+            </div>
           </div>
-          <p>
-            We are Little King Cafe, your new favourite cafe in the block. We
-            take great pride in our unique all-day menu and professionally
-            crafted espresso. Our excellent Supreme coffee beans will surely
-            give you the kick you are looking for to get you going through the
-            day. Come in and have lunch and our lovely staff will provide you
-            excellent service.
-          </p>
-        </article>
-        <a href="about.html" class="boxedbutton" id="about-calltoaction">
-          ABOUT US
-        </a>
-      </div>
-      <div class="rightpanel">
-        <img src="images/photos/establishingshot3.jpg" alt="food" />
-      </div>
-    </div>
-    <!-- menu section -->
-    <div class="section" id="homepage-menusection">
-      <div class="middlepanel">
-        <div class="gallerypanel">
-          <div class="gallerycard">
-            <img src="images/photos/coffee1.jpg" alt="coffee1" />
-            <article>
-              <h3>SUPREME COFFEE<br />BOXER BLEND</h3>
-              <div class="breakline"></div>
-              <p>
-                Get your daily dose of caffeine fix from our highly-trained
-                baristas. A Brazil-based blend designed with the espresso
-                drinker in mind. With its distinctive dark chocolate notes, full
-                body and pleasant finish, the Boxer blend makes gutsy milk
-                drinks, and hefty espresso.
-              </p>
-            </article>
+          <div class="venue">
+            <p>
+              Croke Park <br />
+              Dublin, IRELAND
+            </p>
           </div>
-          <div class="gallerycard">
-            <img src="images/photos/food2.jpg" alt="food" />
-            <article>
-              <h3>MENU TO DIE FOR</h3>
-              <div class="breakline"></div>
-              <p>
-                Try our menu made fresh by our awesome chefs and kitchen hands.
-                New Summer Menu coming up soon.
-              </p>
-            </article>
-          </div>
-          <div class="gallerycard">
-            <img src="images/photos/customers.jpg" alt="COMMUNITY" />
-            <article>
-              <h3>GREAT COMMUNITY</h3>
-              <div class="breakline"></div>
-              <p>
-                Little King Cafe is known around Milford by locals for its great
-                quality food and espresso. We love seeing groups of friends and
-                families, both young and elderly staying in to have lunch with
-                us.
-              </p>
-            </article>
-          </div>
-          <div class="gallerycard">
-            <img src="images/photos/vibes.jpg" alt="vibes" />
-            <article>
-              <h3>RELAXING VIBES</h3>
-              <div class="breakline"></div>
-              <p>
-                Little King Cafe's interior design and decoration was
-                hand-picked by Yui, the owner herself. With an interior design
-                career and background on her belt she ensured to create the
-                relaxing and chill vibe that our regular customers know and
-              </p>
-            </article>
-          </div>
+          <a class="button" href="">
+            <p>TICKETS</p>
+          </a>
         </div>
-        <a href="menu.html" class="boxedbutton" id="menu-calltoaction">
-          VIEW FULL MENU
-        </a>
-      </div>
-    </div>
-    <!-- reservation section -->
-    <div class="section" id="homepage-reservationsection">
-      <div class="leftpanel">
-        <img src="images/photos/table.jpg" alt="" />
-      </div>
-      <div class="rightpanel">
-        <article class="article1">
-          <h3>RESERVATION</h3>
-          <div class="breakline">
-            <div class="box1"></div>
-            <div class="box2"></div>
-            <div class="box1"></div>
-            <div class="box2"></div>
+        <div class="row">
+          <!-- 2 -->
+          <div class="date">
+            <div class="container">
+              <div class="accent"></div>
+              <p class="month">APR</p>
+              <p class="day">24</p>
+              <p class="year">2022</p>
+            </div>
           </div>
-          <p>
-            Breakfast. Brunch. Lunch. Our team's got you sorted! Book a table
-            for your group now!
-          </p>
-        </article>
-        <a href="contact.html#contact-reservationsection" class="boxedbutton" id="reservation-calltoaction">
-          BOOK A TABLE
-        </a>
-      </div>
-    </div>
+          <div class="venue">
+            <p>
+              Croke Park <br />
+              Dublin, IRELAND
+            </p>
+          </div>
+          <a class="button" href="">
+            <p>TICKETS</p>
+          </a>
+        </div>
 
-    <!-- contact section -->
-    <div class="section" id="homepage-contactsection">
-      <div class="middlepanel">
-        <article class="article1">
-          <h3>CONTACT US</h3>
-          <div class="breakline">
-            <div class="box1"></div>
-            <div class="box2"></div>
-            <div class="box1"></div>
-            <div class="box2"></div>
+        <!-- 3 -->
+        <div class="row">
+          <div class="date">
+            <div class="container">
+              <div class="accent"></div>
+              <p class="month">APR</p>
+              <p class="day">28</p>
+              <p class="year">2022</p>
+            </div>
           </div>
-          <p>Please do not hesitate to contact us for any inquiries.</p>
-          <br />
-          <p>132 Kitchener Road<br />Milford<br />Auckland</p>
-          <br />
-          <p>littlekingmilford@gmail.com<br />09 489 7278</p>
-        </article>
-        <br />
-        <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3195.916982774244!2d174.7622570419975!3d-36.772558966018195!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6d0d39e714e40e25%3A0xd700ffdc89dde4e7!2s132%20Kitchener%20Road%2C%20Milford%2C%20Auckland%200620!5e0!3m2!1sen!2snz!4v1639046854403!5m2!1sen!2snz"
-          width="800"
-          height="600"
-          style="border: 0"
-          allowfullscreen=""
-          loading="lazy"
-        ></iframe>
+          <div class="venue">
+            <p>Páirc Uí Chaoimh <br />Cork, IRELAND</p>
+          </div>
+          <a class="button" href="">
+            <p>TICKETS</p>
+          </a>
+        </div>
+        <!-- 4 -->
+        <div class="row">
+          <div class="date">
+            <div class="container">
+              <div class="accent"></div>
+              <p class="month">APR</p>
+              <p class="day">23</p>
+              <p class="year">2022</p>
+            </div>
+          </div>
+          <div class="venue">
+            <p>Páirc Uí Chaoimh <br />Cork, IRELAND</p>
+          </div>
+          <a class="button" href="">
+            <p>TICKETS</p>
+          </a>
+        </div>
+        <!-- 5 -->
+        <div class="row">
+          <div class="date">
+            <div class="container">
+              <div class="accent"></div>
+              <p class="month">APR</p>
+              <p class="day">23</p>
+              <p class="year">2022</p>
+            </div>
+          </div>
+          <div class="venue">
+            <p>Thomond Park <br />Limerick, IRELAND</p>
+          </div>
+          <a class="button" href="">
+            <p>TICKETS</p>
+          </a>
+        </div>
       </div>
-    </div>
-    <!-- footer section -->
-    <div class="footerblackbar">
-      <nav id="bottom-navbar">
-        <a href="index.html">HOME</a>
-        <a href="menu.html">MENU</a>
-        <a href="about.html">ABOUT</a>
-        <a href="contact.html#contactsection">CONTACT</a>
-        <a href="contact.html#contact-reservationsection" class="boxedbutton"
-          >RESERVATION</a
-        >
-      </nav>
-    </div>
-    <div class="section" id="footersection">
-      <div class="middlepanel">
-        <div class="panel1">
-          <a href="https://www.facebook.com/littlekingcafenz" target="_blank">
-            <img src="images/icons/Asset2.png" alt="" />
-          </a>
-          <a
-            href="https://www.instagram.com/littlekingcafe_nz/"
-            target="_blank"
-          >
-            <img src="images/icons/Asset3.png" alt="" />
+    </section>
+
+    <!-- section 3 - merch -->
+    <section class="section" id="homepage-section3">
+      <h2>MERCH</h2>
+      <div class="breakline"></div>
+      <div class="cardcontainer">
+        <div class="card">
+          <img src="images/merch1.JPG" alt="" />
+          <h2>= ULTIMATE BUNDLE</h2>
+          <a href="" class="button">
+            <p>BUY NOW</p>
           </a>
         </div>
-        <div class="panel2">
-          <p>132 Kitchener Road<br />Milford<br />Auckland</p>
-          <br />
-          <p>littlekingmilford@gmail.com<br />09 489 7278</p>
+        <div class="card">
+          <img src="images/merch2.JPG" alt="" />
+          <h2>
+            STANDARD BLACK VINYL <br />
+            WITH SIGNATURE
+          </h2>
+          <a href="" class="button">
+            <p>BUY NOW</p>
+          </a>
         </div>
-        <div class="panel3">
-          <img src="images/icons/Asset4.png" alt="" />
+        <div class="card">
+          <img src="images/memrch3.JPG" alt="" />
+          <h2>GOLD BLINK LILAC LONGSLEEVE</h2>
+          <a href="" class="button">
+            <p>BUY NOW</p>
+          </a>
         </div>
+        <div class="card">
+          <img src="images/merch4.JPG" alt="" />
+          <h2>BAD HABITS <br />LIMITED EDITION CD</h2>
+          <a href="" class="button">
+            <p>BUY NOW</p>
+          </a>
+        </div>
+      </div>
+      <div class="breakline"></div>
+      <a href="" class="button">
+        <p>VISIT STORE</p>
+      </a>
+    </section>
+    <!-- footer -->
+    <div class="section" id="footer">
+      <div class="footernavbar">
+        <nav>
+          <a href="">TOUR</a>
+          <a href="">NEWS</a>
+          <a href="">STORE</a>
+          <a href="">MERCH</a>
+          <a href="">SUBSCRIBE</a>
+        </nav>
+      </div>
+      <div class="socialmedialinks">
+        <a href="https://www.facebook.com/EdSheeranMusic/"><img src="images/icon-facebook.png" alt="" /></a>
+        <a href="https://twitter.com/edsheeran/"><img src="images/icon-twitter.png" alt="" /></a>
+        <a href="https://www.instagram.com/teddysphotos/"><img src="images/icon-instagram.png" alt="" /></a>
+        <a href="https://www.youtube.com/user/EdSheeran?hl=en-GB&gl=GB"><img src="images/icon-youtube.png" alt="" /></a>
+        <a href="https://www.deezer.com/us/artist/384236"><img src="images/icon-deezer.png" alt="" /></a>
+        <a href="https://music.apple.com/gb/artist/ed-sheeran/183313439"><img src="images/icon-apple.png" alt="" /></a>
+      </div>
+      <div class="bottomsection">
+        <p>© 2021 Warner Music UK Limited.</p>
+        <a href="">Privacy Policy</a>
+        <a href="">Terms of Use</a>
+        <a href="">Cookies Policy</a>
+        <a href="">Cookies Settings</a>
       </div>
     </div>
   </body>
