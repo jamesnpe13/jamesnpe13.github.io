@@ -11,11 +11,32 @@
   background-color: grey;
 }
 
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
 body {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Cutive Mono", monospace;
   font-size: 1em;
-  background-color: rgb(199, 199, 199);
+  background-color: rgb(41, 41, 41);
   color: rgb(46, 46, 46);
+}
+
+h2, h3, h4, h5 {
+  font-family: "Titillium Web", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+p {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 
 h3 {
@@ -29,16 +50,27 @@ h4 {
   font-size: 0.9em;
 }
 
+.header h2, .header h3 {
+  color: white;
+}
+
 .card.dark {
   color: rgb(235, 235, 235);
   background-color: rgb(44, 46, 53);
 }
+.card.dark h3 {
+  color: rgb(25, 226, 193);
+}
+.card.dark h5 {
+  color: rgb(25, 226, 193);
+}
+
 section {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  margin: 20px 0;
+  margin: 50px;
 }
 
 .content-container {
@@ -48,6 +80,7 @@ section {
 @media screen and (max-width: 563px) {
   .content-container {
     margin: 0 50px;
+    margin-bottom: 100px;
   }
 }
 
@@ -59,8 +92,15 @@ section {
   gap: 25px;
   justify-content: center;
 }
+@media screen and (max-width: 563px) {
+  .gallery .content-container {
+    gap: 62.5px;
+  }
+}
 
 .card {
+  border: rgb(158, 158, 158) 1px solid;
+  cursor: pointer;
   height: 350px;
   width: 250px;
   flex-grow: 2;
@@ -73,7 +113,7 @@ section {
   grid-template-columns: 1fr;
   grid-template-rows: 1fr -webkit-max-content 1fr -webkit-max-content;
   grid-template-rows: 1fr max-content 1fr max-content;
-  gap: 5px;
+  gap: 10px;
 }
 .card .thumbnail-container {
   height: 190px;
@@ -88,24 +128,28 @@ section {
   width: 100%;
   filter: saturate(0) contrast(0.8) brightness(1.2);
 }
+.card h3 {
+  color: rgb(0, 134, 83);
+}
 .card h5 {
   justify-self: flex-start;
   font-weight: 100;
   font-size: 0.7em;
   padding: 15px 0;
-  color: rgb(139, 139, 139);
+  color: rgb(0, 134, 83);
 }
 
 .hover-effect {
   transition: all 0.2s ease-out;
-  opacity: 0.5;
+  opacity: 0.8;
   scale: 1;
 }
 @media screen and (max-width: 563px) {
   .hover-effect {
     transition: all 0.2s ease-out;
-    opacity: 0.5;
-    scale: 0.8;
+    opacity: 0;
+    scale: 0.9;
+    translate: 0 100px;
   }
 }
 
@@ -118,14 +162,14 @@ section {
 }
 
 @media screen and (max-width: 563px) {
-  .mobile-focus {
+  .mobile-focus.hover-effect {
     transition: all 0.2s ease-out;
     opacity: 0.5;
-    scale: 0.8;
-    opacity: 1;
     scale: 1;
+    opacity: 1;
+    translate: 0 0;
   }
-  .mobile-focus .thumbnail-container img {
+  .mobile-focus.hover-effect .thumbnail-container img {
     filter: saturate(1) contrast(0.8) brightness(1.2);
   }
 }/*# sourceMappingURL=main.css.map */

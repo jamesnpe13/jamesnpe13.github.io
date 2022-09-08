@@ -7,7 +7,7 @@ function reveal() {
           var visibilityMargin = windowHeight / 5;
           var elementVisibleBottom = windowHeight - visibilityMargin;
           var elementVisibleTop = visibilityMargin;
-          if (elementTop < elementVisibleBottom && elementBottom > elementVisibleTop) {
+          if (elementBottom < windowHeight ) {
                reveals[i].classList.add("mobile-focus");
           } else {
                reveals[i].classList.remove("mobile-focus");

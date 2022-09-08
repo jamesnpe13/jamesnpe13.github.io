@@ -4,6 +4,11 @@
      margin: 0;
      box-sizing: border-box;
 }
+// fonts
+
+// font-family: 'Cutive Mono', monospace;
+// font-family: 'Titillium Web', sans-serif;
+// 
 $border-radius: 15px;
 $card-padding: 10px;
 $gap: 25px;
@@ -14,11 +19,26 @@ $section-padding: 100px;
      height: 3px;
      background-color: grey;
 }
+a {
+     text-decoration: none;
+     color: inherit;
+}
 body {
-     font-family: Arial, Helvetica, sans-serif;
+     font-family: 'Cutive Mono', monospace;
      font-size: 1em;
-     background-color: rgb(199, 199, 199);
+     background-color: rgb(41, 41, 41);
      color: rgb(46, 46, 46);
+}
+h2, h3, h4, h5 {
+     font-family: 'Titillium Web', sans-serif;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+p {
+     user-select: none;
 }
 h3 {
      font-weight: 500;
@@ -29,11 +49,24 @@ h4 {
      font-weight: 100;
      font-size: 0.9em;
 }
+.header {
+     h2, h3 {
+          color: white;
+     }
+}
 .card.dark {
      color: rgb(235, 235, 235);
      .thumbnail-container {
      }
      background-color: rgb(44, 46, 53);
+     h3 {
+          color: rgb(25, 226, 193);
+     }
+
+     h5 {
+         
+          color: rgb(25, 226, 193);
+     }
 }
 
 section {
@@ -41,13 +74,15 @@ section {
      justify-content: center;
      align-items: center;
      flex-direction: column;
-     margin: 20px 0;
+     margin: 50px;
 }
 .content-container {
      max-width: 840px;
      margin: 0 20px;
      @media screen and (max-width: 563px) {
           margin: 0 50px;
+
+          margin-bottom: 100px;
      }
 }
 .gallery .content-container {
@@ -57,8 +92,13 @@ section {
      flex-wrap: wrap;
      gap: $gap;
      justify-content: center;
+     @media screen and (max-width: 563px) {
+          gap: $gap * 2.5;
+     }
 }
 .card {
+     border: rgb(158, 158, 158) 1px solid;
+     cursor: pointer;
      height: 350px;
      width: $card-width;
      flex-grow: 2;
@@ -70,7 +110,7 @@ section {
      display: grid;
      grid-template-columns: 1fr;
      grid-template-rows: 1fr max-content 1fr max-content;
-     gap: 5px;
+     gap: 10px;
      .thumbnail-container {
           height: 190px;
           width: 100%;
@@ -84,23 +124,28 @@ section {
                filter: saturate(0) contrast(0.8) brightness(1.2);
           }
      }
+     h3 {
+          color: rgb(0, 134, 83);
+     }
 
      h5 {
           justify-self: flex-start;
           font-weight: 100;
           font-size: 0.7em;
           padding: 15px 0;
-          color: rgb(139, 139, 139);
+          color: rgb(0, 134, 83);
      }
 }
 .hover-effect {
      transition: all 0.2s ease-out;
-     opacity: 0.5;
+     opacity: 0.8;
      scale: 1;
+
      @media screen and (max-width: 563px) {
           transition: all 0.2s ease-out;
-          opacity: 0.5;
-          scale: 0.8;
+          opacity: 0;
+          scale: 0.9;
+          translate: 0 100px;
      }
 }
 .hover-effect:hover {
@@ -111,13 +156,13 @@ section {
      }
 }
 
-.mobile-focus {
+.mobile-focus.hover-effect {
      @media screen and (max-width: 563px) {
           transition: all 0.2s ease-out;
           opacity: 0.5;
-          scale: 0.8;
-          opacity: 1;
           scale: 1;
+          opacity: 1;
+          translate: 0 0;
           .thumbnail-container {
                img {
                     filter: saturate(1) contrast(0.8) brightness(1.2);
