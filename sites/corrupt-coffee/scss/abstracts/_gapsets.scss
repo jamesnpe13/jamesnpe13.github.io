@@ -1,0 +1,33 @@
+@use "../abstracts/variables" as vars;
+@mixin article-gap-set {
+   h3:first-child {
+      margin-bottom: vars.$narrow;
+   }
+   h3.sub {
+      margin-bottom: vars.$narrow;
+   }
+   .breakline {
+      margin-bottom: vars.$narrow;
+      margin-top: vars.$wide;
+   }
+   p.article {
+      margin-bottom: vars.$wide;
+   }
+}
+
+@mixin section-heading-gap-set {
+   h2:firs-child {
+      margin-bottom: vars.$narrow;
+   }
+   h2:nth-of-type(2) {
+      margin-bottom: vars.$medium;
+   }
+}
+@mixin product-full {
+      h4 {
+         margin-bottom: vars.$wide;
+      }
+      p.card {
+         margin-bottom: vars.$wide;
+      }
+}

@@ -1,0 +1,35 @@
+// base
+@use "./reset";
+@use "./animations";
+@use "./layouts";
+
+// components
+@use "../components/header";
+@use "../components/footer";
+@use "../components/hamburger";
+@use "../components/menu-overlay";
+// @use "../components/section";
+
+@use "../components/card-gallery";
+@use "../components/cards";
+@use "../components/breakline";
+@use "../components/buttons";
+@use "../components/inputs";
+
+// abstracts
+@use "../abstracts/breakpoints" as bp;
+@use "../abstracts/colors" as cols;
+@use "../abstracts/typography" as type;
+@use "../abstracts/variables" as vars;
+@use "../abstracts/effects" as fx;
+@use "../abstracts/gapsets" as gs;
+@use "../abstracts/mixins" as mx;
+@use "../abstracts/mediaqueries" as mq;
+
+// pages
+@use "../pages/index";
+@use "../pages/shop";
+@use "../pages/product-1";
+
+// font set
+@include type.font-set();

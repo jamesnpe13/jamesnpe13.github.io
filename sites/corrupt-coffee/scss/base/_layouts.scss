@@ -1,0 +1,131 @@
+@use "../abstracts/debug" as db;
+@use "../abstracts/mediaqueries" as mq;
+@use "../abstracts/colors" as cols;
+
+// variables
+$margin-top: 100px;
+$margin-bottom: 100px;
+$grid-gap: 50px;
+$gallery-justify: center;
+// ---------------------------------------
+// ---------------------------------------
+// ---------------------------------------
+// section
+//      content-container
+//              panel
+//                  elements
+// ---------------------------------------
+// ---------------------------------------
+// ---------------------------------------
+
+//section default
+section {
+   position: relative;
+   width: 100%;
+   display: grid;
+   grid-template-columns: 2fr 12fr 2fr;
+   
+   
+   align-items: center;
+   justify-content: center;
+   height: auto;
+   
+   .content-container {
+      grid-column: 2 / 3;
+      grid-row: 1 / -1;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: $grid-gap;
+      min-height: 300px;
+      height: auto;
+      margin-top: $margin-top;
+      margin-bottom: $margin-bottom;
+      .panel {
+         display: flex;
+         flex-direction: column;
+         justify-content: center;
+         &:first-child {
+            align-items: flex-start;
+         }
+         &:last-child {
+            align-items: flex-end;
+         }
+      }
+   }
+   & > .background {
+      grid-column: 1 / -1;
+      grid-row: 1 / -1;
+      z-index: -1;
+      @include mq.medium {
+         display: none;
+      }
+   }
+}
+
+// layout templates
+section {
+   // vsplit
+   &.vsplit {
+      // section code
+      .content-container {
+         // container code
+         grid-template-columns: 1fr 1fr;
+         @include mq.medium {
+            grid-template-columns: 1fr;
+         }
+      }
+   }
+
+   // gallery
+   &.gallery {
+      // section code
+      .content-container {
+         // container code
+         grid-template-columns: 1fr;
+         gap: 50px;
+         .panel {
+            // panel code
+            align-items: center;
+            justify-content: center;
+
+            &:nth-child(n + 2) {
+               flex-direction: row;
+               justify-content: $gallery-justify;
+               z-index: 1;
+               flex-wrap: wrap;
+               column-gap: $grid-gap;
+               row-gap: $grid-gap + 50px;
+               @include mq.small {
+                  flex-direction: column;
+               }
+            }
+         }
+      }
+   }
+
+   // single
+   &.single {
+      // section code
+      .content-container {
+         // container code
+         margin: 0;
+         grid-template-columns: 1fr;
+         .panel {
+            // panel code
+            align-items: center;
+         }
+      }
+   }
+}
+
+// -----------------Blank layout------------------
+// &.layoutname {
+//     // section code
+//       .content-container {
+//         // container code
+//          .panel {
+//             // panel code
+//          }
+//       }
+//    }
+// -----------------------------------------------

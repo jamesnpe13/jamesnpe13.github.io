@@ -1,1 +1,127 @@
-@use "./base/base";
+/* reset */
+* {
+     padding: 0;
+     margin: 0;
+     box-sizing: border-box;
+}
+$border-radius: 15px;
+$card-padding: 10px;
+$gap: 25px;
+$card-width: 250px;
+$section-padding: 100px;
+.breakline {
+     width: 100%;
+     height: 3px;
+     background-color: grey;
+}
+body {
+     font-family: Arial, Helvetica, sans-serif;
+     font-size: 1em;
+     background-color: rgb(199, 199, 199);
+     color: rgb(46, 46, 46);
+}
+h3 {
+     font-weight: 500;
+     font-size: 1.2em;
+     margin-top: 5px;
+}
+h4 {
+     font-weight: 100;
+     font-size: 0.9em;
+}
+.card.dark {
+     color: rgb(235, 235, 235);
+     .thumbnail-container {
+     }
+     background-color: rgb(44, 46, 53);
+}
+
+section {
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     flex-direction: column;
+     margin: 20px 0;
+}
+.content-container {
+     max-width: 840px;
+     margin: 0 20px;
+     @media screen and (max-width: 563px) {
+          margin: 0 50px;
+     }
+}
+.gallery .content-container {
+     height: auto;
+     display: flex;
+     flex-direction: row;
+     flex-wrap: wrap;
+     gap: $gap;
+     justify-content: center;
+}
+.card {
+     height: 350px;
+     width: $card-width;
+     flex-grow: 2;
+     background-color: white;
+     border-radius: $border-radius;
+     padding: $card-padding;
+     justify-content: flex-start;
+     box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.25);
+     display: grid;
+     grid-template-columns: 1fr;
+     grid-template-rows: 1fr max-content 1fr max-content;
+     gap: 5px;
+     .thumbnail-container {
+          height: 190px;
+          width: 100%;
+          border-radius: $border-radius * 0.5;
+          overflow: hidden;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          img {
+               width: 100%;
+               filter: saturate(0) contrast(0.8) brightness(1.2);
+          }
+     }
+
+     h5 {
+          justify-self: flex-start;
+          font-weight: 100;
+          font-size: 0.7em;
+          padding: 15px 0;
+          color: rgb(139, 139, 139);
+     }
+}
+.hover-effect {
+     transition: all 0.2s ease-out;
+     opacity: 0.5;
+     scale: 1;
+     @media screen and (max-width: 563px) {
+          transition: all 0.2s ease-out;
+          opacity: 0.5;
+          scale: 0.8;
+     }
+}
+.hover-effect:hover {
+     translate: 0 -10px;
+     opacity: 1;
+     img {
+          filter: saturate(1) contrast(0.8) brightness(1.2);
+     }
+}
+
+.mobile-focus {
+     @media screen and (max-width: 563px) {
+          transition: all 0.2s ease-out;
+          opacity: 0.5;
+          scale: 0.8;
+          opacity: 1;
+          scale: 1;
+          .thumbnail-container {
+               img {
+                    filter: saturate(1) contrast(0.8) brightness(1.2);
+               }
+          }
+     }
+}

@@ -1,0 +1,111 @@
+@use "../abstracts/effects" as fx;
+@use "../abstracts/variables" as vars;
+@use "../abstracts/colors" as cols;
+@use "../abstracts/debug" as db;
+
+$card-padding: 40px;
+// Card A (info cards)
+.card-a {
+   @include fx.drop-shadow();
+   background-color: cols.$primary-white;
+   border-radius: vars.$border-radius;
+   height: 350px;
+   width: 300px;
+   display: grid;
+   grid-template-rows: 100px 1fr;
+   gap: 65px;
+   overflow: hidden;
+
+   div {
+      &:first-child {
+         position: relative;
+         img {
+            width: 40%;
+            position: absolute;
+            top: 30%;
+            left: 50%;
+            transform: translate(-50%, 0);
+            // @include fx.drop-shadow-2();
+         }
+      }
+      &:last-child {
+         display: flex;
+         flex-direction: column;
+         justify-content: flex-start;
+         align-items: center;
+         text-align: center;
+         padding: $card-padding;
+         padding-top: 0;
+      }
+   }
+
+   //    colors
+   &.gradient-1 > div:first-child {
+      @include cols.gradient-1();
+   }
+   &.gradient-2 > div:first-child {
+      @include cols.gradient-2();
+   }
+   &.gradient-3 > div:first-child {
+      @include cols.gradient-3();
+   }
+}
+
+// Card B (product cards)
+
+.card-b {
+   @include fx.drop-shadow();
+   background-color: cols.$primary-white;
+   border-radius: vars.$border-radius;
+   height: 380px;
+   width: 300px;
+   display: grid;
+   grid-template-rows: 180px 1fr;
+
+   & > div {
+      &:first-child {
+         border-radius: vars.$border-radius vars.$border-radius 0 0;
+         background-color: white;
+         position: relative;
+         img {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -60%);
+            width: 70%;
+         }
+      }
+      &:last-child {
+         border-radius: 0 0 vars.$border-radius vars.$border-radius;
+         background-color: white;
+         text-align: center;
+         display: flex;
+         flex-direction: column;
+         justify-content: space-between;
+         padding-bottom: 20px;
+         & > * {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+         }
+      }
+   }
+
+   //    colors
+   &.gradient-1 > div:first-child {
+      @include cols.gradient-1();
+   }
+   &.gradient-2 > div:first-child {
+      @include cols.gradient-2();
+   }
+   &.gradient-3 > div:first-child {
+      @include cols.gradient-3();
+   }
+   &.gradient-4 > div:first-child {
+      @include cols.gradient-4();
+   }
+   &.gradient-5 > div:first-child {
+      @include cols.gradient-5();
+   }
+}

@@ -1,0 +1,17 @@
+// breakpoints
+$bp2: 1330px;
+$bp1: 930px;
+
+
+@mixin medium {
+    @media screen and (max-width: $bp2) {
+       @content;
+    }
+ }
+
+
+@mixin small {
+    @media screen and (max-width: $bp1) {
+       @content;
+    }
+ }

@@ -1,0 +1,15 @@
+@use "../abstracts/variables" as vars;
+@use "../abstracts/mediaqueries" as mq;;
+
+input[type="text"] {
+   outline: 1px solid red;
+   height: 50px;
+   width: 390px;
+   border-radius: vars.$border-radius;
+   border: none;
+   font-size: 1em;
+   padding-left: 20px;
+   @include mq.medium {
+      width: auto;
+   }
+}

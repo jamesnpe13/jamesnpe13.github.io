@@ -1,0 +1,39 @@
+@use "../abstracts/colors" as cols;
+@use "../abstracts/variables" as vars;
+
+.button {
+   user-select: none;
+   cursor: pointer;
+   padding: 6px 30px 10px 30px;
+   border-radius: vars.$border-radius;
+   border: 2px solid;
+   width: max-content;
+   &.small {
+      padding: 3px 6px 5px 6px;
+      border: 1px solid;
+   }
+   border-color: cols.$primary-grey;
+   color: cols.$primary-grey;
+   &.orange {
+      color: cols.$primary-orange;
+      border-color: cols.$primary-orange;
+   }
+   &.blue {
+      color: cols.$primary-blue;
+      border-color: cols.$primary-grey;
+   }
+   &.white {
+      color: cols.$primary-white;
+      border-color: cols.$primary-white;
+   }
+   &.black {
+      color: cols.$primary-black;
+      border-color: cols.$primary-black;
+   }
+}
+
+.button-container {
+   display: flex;
+   flex-direction: row;
+   gap: vars.$inline-gap;
+}

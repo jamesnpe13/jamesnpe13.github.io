@@ -1,0 +1,136 @@
+// abstracts
+@use "./colors" as cols;
+@use "./variables" as vars;
+@use "./mediaqueries" as mq;
+
+// font weight
+$light: 300;
+$regular: 400;
+$medium: 500;
+$semibold: 600;
+$bold: 700;
+$black: 800;
+
+// mixins
+@mixin font-set {
+   body {
+      font-family: degular, Arial, sans-serif;
+      font-size: 20px;
+   }
+
+   // hero
+   h1 {
+      &.reg {
+         font-size: 4vw;
+         font-weight: $regular;
+         height: 3.5vw;
+         line-height: 2.4vw;
+
+         
+      }
+      &.bold {
+         font-weight: $semibold;
+         font-size: 5.1vw;
+         height: 4vw;
+         line-height: 3.5vw;
+      }
+      &.sub {
+         font-weight: $regular;
+         font-size: 2vw;
+      }
+   }
+
+   // section title
+   h2 {
+      font-size: 1.5em;
+      font-weight: $light;
+      width: 600px;
+      text-align: center;
+      &.bold {
+         font-size: 3em;
+         font-weight: $medium;
+
+      }
+      @include mq.small {
+         width: auto;
+         font-size: 1.2em;
+      }
+   }
+
+   // article
+   h3 {
+      font-size: 3em;
+      font-weight: $regular;
+   }
+   h3.sub {
+      font-size: 1.5em;
+      font-weight: $regular;
+      width: 400px;
+   }
+   p.article {
+      font-size: 1em;
+      font-weight: $regular;
+      width: 400px;
+      line-height: 1.5em;
+   }
+
+   // card
+   h4 {
+      font-size: 1.5em;
+      font-weight: $medium;
+   }
+   p.card {
+      font-size: 0.9em;
+      font-weight: $regular;
+   }
+
+   // nav bar
+   nav a {
+      font-size: 0.9em;
+      font-weight: $light;
+   }
+
+   // buttons
+   .button {
+      font-size: 1.1em;
+      &.small {
+         font-size: 0.9em;
+      }
+   }
+
+   // colors
+   h1,
+   h2,
+   h3,
+   h4,
+   h5,
+   p {
+      color: cols.$primary-grey;
+      &.orange {
+         color: cols.$primary-orange;
+      }
+      &.blue {
+         color: cols.$primary-blue;
+      }
+      &.white {
+         color: cols.$primary-white;
+      }
+      &.black {
+         color: cols.$primary-black;
+      }
+      &.grey1 {
+         color: cols.$grey-3;
+      }
+      &.grey2 {
+         color: cols.$grey-2;
+      }
+      &.pale-orange {
+         color: cols.$orange-1;
+      }
+   }
+
+   // text decorations
+   a {
+      text-decoration: none;
+   }
+}

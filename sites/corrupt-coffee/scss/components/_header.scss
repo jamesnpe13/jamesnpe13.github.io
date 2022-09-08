@@ -1,0 +1,79 @@
+@use "../abstracts/colors" as cols;
+@use "../abstracts/variables" as vars;
+@use "../abstracts/typography" as type;
+@use "../abstracts/mediaqueries" as mq;
+@use "../abstracts/effects" as fx;
+
+header {
+   position: fixed;
+   top: 0;
+   left: 0;
+   z-index: 100;
+   width: 100%;
+   height: 40px;
+   background-color: cols.$primary-grey;
+   padding: vars.$narrow-padding;
+   @include mq.medium {
+      padding-left: 20px;
+      padding-right: 20px;
+      background-color: rgba(255, 255, 255, 0.363);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.24);
+      
+      backdrop-filter: blur(5px);
+   }
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+
+   .logo-container {
+      height: 100%;
+      display: flex;
+      align-items: center;
+      img {
+         height: 50%;
+         filter: brightness(100);
+         @include mq.medium {
+            @include fx.glass();
+            height: 35%;
+         }
+      }
+   }
+   nav.desktop {
+      display: flex;
+      gap: vars.$nav-gap;
+      @include mq.medium {
+         display: none;
+      }
+      a {
+         color: cols.$primary-white;
+      }
+      .cart-link {
+         transform: translate(0, 8%);
+         scale: 1.2;
+      }
+   }
+
+   nav.mobile {
+      width: auto;
+      height: auto;
+      display: none;
+      @include mq.medium {
+         display: block;
+      }
+      .hamburger {
+         display: flex;
+         flex-direction: column;
+         gap: 5px;
+         padding: 5px;
+         cursor: pointer;
+         div {
+            width: 30px;
+            height: 3px;
+            background-color: cols.$grey-3;
+         }
+      }
+      .menu-overlay {
+         position: absolute;
+      }
+   }
+}

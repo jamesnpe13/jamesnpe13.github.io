@@ -1,0 +1,111 @@
+@use "../abstracts/variables" as vars;
+@use "../abstracts/debug" as db;
+@use "../abstracts/gapsets" as gs;
+@use "../abstracts/mixins" as mx;
+@use "../abstracts/colors" as cols;
+@use "../abstracts/mediaqueries" as mq;
+
+// section specific
+main.index {
+   section {
+      &.hero {
+         // section code
+         height: 100vh;
+         .content-container {
+            // container code
+            .panel {
+               // panel code
+               &:first-child {
+                  h1.sub {
+                     margin-bottom: vars.$medium;
+                  }
+                  h1.reg {
+                     margin-bottom: vars.$narrow;
+                  }
+                  h1.bold {
+                     margin-bottom: vars.$wide;
+                  }
+               }
+            }
+         }
+      }
+
+      &.fourteen-years {
+         height: auto;
+         @include mq.medium {
+            background-color: cols.$primary-orange;
+         }
+         .content-container {
+            .panel {
+               &:first-child {
+                  & > * {
+                     transform: translateY(100px);
+                     @include mq.medium {
+                        transform: translateY(0);
+                     }
+                  }
+
+                  @include gs.article-gap-set();
+               }
+               &:last-child {
+                  img {
+                     width: 70%;
+                  }
+               }
+            }
+         }
+      }
+      &.story {
+         .content-container {
+            .panel {
+               &:first-child {
+                  @include gs.section-heading-gap-set();
+               }
+               &:last-child {
+                  justify-content: space-evenly;
+                  @include mq.medium {
+                     justify-content: center;
+                  }
+               }
+            }
+         }
+      }
+
+      &.work-together {
+         @include mq.medium {
+            background-color: cols.$primary-orange;
+            height: auto;
+         }
+         .content-container {
+            .panel {
+               &:first-child {
+                  img {
+                     width: 80%;
+                  }
+               }
+               &:last-child {
+                  align-items: flex-start;
+                  @include gs.article-gap-set();
+               }
+            }
+         }
+         & > .background {
+            @include mx.bg-detach();
+            translate: 0 -200px;
+         }
+      }
+
+      &.products {
+         .content-container {
+            gap: 80px;
+         }
+      }
+
+      &.shop-all {
+         @include gs.section-heading-gap-set();
+         @include mq.medium {
+            background-color: cols.$primary-orange;
+         }
+      }
+   }
+}
