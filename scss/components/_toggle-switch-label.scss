@@ -1,0 +1,33 @@
+@use "../abstracts/debug" as db;
+@use "../abstracts/colors" as cols;
+@use "../abstracts/gapsets" as gaps;
+@use "../abstracts/variables" as vars;
+.toggle-switch {
+   height: 25px;
+   width: 42px;
+   background-color: grey;
+   border-radius: 13px;
+   display: flex;
+   align-items: center;
+   justify-content: flex-start;
+   padding: 4px;
+   .circle {
+      background-color: white;
+      width: 18px;
+      height: 18px;
+      border-radius: 100%;
+   }
+   &.on {
+      justify-content: flex-end;
+      background-color: cols.$blue-accent;
+   }
+}
+.toggle-switch-label {
+   & > div {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      width: max-content;
+      margin-top: 15px;
+   }
+}

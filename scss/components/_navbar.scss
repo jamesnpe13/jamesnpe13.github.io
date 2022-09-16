@@ -1,0 +1,87 @@
+@use "../abstracts/debug" as db;
+@use "../abstracts/colors" as cols;
+@use "../abstracts/gapsets" as gaps;
+@use "../abstracts/variables" as vars;
+@use "../abstracts/effects" as fx;
+@use "../abstracts/mixins" as mx;
+@use "../abstracts//mediaqueries" as mq;
+
+nav.desktop {
+   z-index: 100;
+   width: 80px;
+   height: 100vh;
+   background-color: cols.$grey-3;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: flex-start;
+   gap: 15px;
+   padding-left: gaps.$base-gap;
+   transition: all 0.2s ease-out;
+
+   .nav-button-container {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+   }
+
+   .nav-button-container:first-of-type {
+      position: absolute;
+      top: gaps.$base-gap;
+   }
+   &:hover {
+      width: 220px;
+   }
+   .label {
+      display: none;
+   }
+   h3 {
+      user-select: none;
+   }
+   @media screen and (max-width: mq.$bp2) {
+      display: none;
+   }
+}
+nav.mobile {
+   display: none;
+
+   z-index: 100;
+   height: 80px;
+   width: 100%;
+   background-color: cols.$grey-3;
+   justify-content: space-between;
+   align-items: flex-start;
+   padding: gaps.$base-gap;
+   flex-direction: column;
+   .group-1 {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      height: auto;
+   }
+   &.expanded {
+      height: max-content;
+   }
+   @media screen and (max-width: mq.$bp2) {
+      display: flex;
+   }
+   .group-2 {
+      display: flex;
+      width: 100%;
+      justify-content: space-between;
+      padding: 50px 0;
+      & > div {
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+         justify-content: center;
+         .label {
+            font-size: 0.8em;
+         }
+      }
+      .mobile-icon-nav {
+          display: none;
+      }
+   }
+}

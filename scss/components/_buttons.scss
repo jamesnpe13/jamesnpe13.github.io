@@ -1,0 +1,52 @@
+@use "../abstracts/effects" as fx;
+@use "../abstracts/variables" as vars;
+@use "../abstracts/colors" as cols;
+.button {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   user-select: none;
+   cursor: pointer;
+   &.icon {
+      width: 50px;
+      height: 50px;
+   }
+   &.box {
+      @include fx.dropshadow-close();
+      border-radius: vars.$border-radius-med;
+      background-color: cols.$grey-3;
+   }
+   &.panic {
+      background-color: cols.$grey-3;
+      height: 77px;
+      border-radius: vars.$border-radius-med;
+      border: 3px solid cols.$red;
+      & > div:first-child {
+         display: flex;
+         align-items: center;
+         justify-content: center;
+         gap: 10px;
+         img {
+            transform: translateY(2px) scale(1.06);
+         }
+      }
+   }
+   &.fat {
+      background-color: cols.$grey-3;
+      height: 60px;
+      border-radius: vars.$border-radius-med;
+      & > div:first-child {
+         display: flex;
+         align-items: center;
+         justify-content: center;
+         gap: 10px;
+         img {
+            transform: translateY(2px) scale(1.06);
+         }
+      }
+   }
+   &.blue-accent {
+      background-color: cols.$blue-accent;
+      box-shadow: 4px 4px 20px rgba(0, 153, 255, 0.452);
+   }
+}

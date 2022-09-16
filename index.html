@@ -1,73 +1,268 @@
 <!DOCTYPE html>
 <html lang="en">
-     <head>
-          <meta charset="UTF-8" />
-          <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-          <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-          <link rel="stylesheet" href="./css/main.css" />
-          <!-- fonts -->
-          <link rel="preconnect" href="https://fonts.googleapis.com" />
-          <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-          <link href="https://fonts.googleapis.com/css2?family=Cutive+Mono&family=Titillium+Web:wght@300;400&display=swap" rel="stylesheet" />
-          <!--  -->
-          <title>James Elazegui - Public Repo</title>
-     </head>
-     <body>
-          <section class="header">
-               <h2>Public Repository</h2>
-               <h3>James Elazegui</h3>
-          </section>
+   <head>
+      <meta charset="UTF-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="stylesheet" href="./css/main.css" />
+      <title>Tripwire - Home Security Automation</title>
+   </head>
+   <body>
+      <!-- nav bar -->
+      <nav class="desktop shadow2" id="navbar">
+         <div class="nav-button-container">
+            <div class="button icon box">
+               <img src="./images/account-icon.svg" alt="" />
+            </div>
+            <h3 class="label">Account</h3>
+         </div>
+         <div class="nav-button-container">
+            <div class="button icon">
+               <img src="./images/dashboard-icon.svg" alt="" />
+            </div>
+            <h3 class="label">Dashboard</h3>
+         </div>
+         <div class="nav-button-container">
+            <div class="button icon">
+               <img src="./images/locations-icon.svg" alt="" />
+            </div>
+            <h3 class="label">Locations</h3>
+         </div>
+         <div class="nav-button-container">
+            <div class="button icon">
+               <img src="./images/devices-icon.svg" alt="" />
+            </div>
+            <h3 class="label">Devices</h3>
+         </div>
+         <div class="nav-button-container">
+            <div class="button icon">
+               <img src="./images/recordings-icon.svg" alt="" />
+            </div>
+            <h3 class="label">Recordings</h3>
+         </div>
+         <div class="nav-button-container">
+            <div class="button icon">
+               <img src="./images/call-icon.svg" alt="" />
+            </div>
+            <h3 class="label">Dial</h3>
+         </div>
+         <div class="nav-button-container">
+            <div class="button icon">
+               <img src="./images/settings-icon.svg" alt="" />
+            </div>
+            <h3 class="label">Settings</h3>
+         </div>
+      </nav>
 
-          <section class="gallery">
-               <div class="content-container">
-                    <a class="card hover-effect dark" href="./sites/corrupt-coffee/index.html" target="_blank">
-                         <div class="thumbnail-container">
-                              <img src="./images/corrupt-coffee.png" alt="" />
-                         </div>
-                         <h3>Corrupt Coffee Roastery</h3>
-                         <h4>
-                              Static multi-page website
-                              <br />
-                              HTML, CSS, SASS, JS
-                         </h4>
-                         <h5>29 September 2022</h5>
-                    </a>
-
-                    <a class="card hover-effect dark" href="./sites/little-king-eatery/index.html" target="_blank">
-                         <div class="thumbnail-container">
-                              <img src="./images/little-king-coffee.png" alt="" />
-                         </div>
-                         <h3>Little King Eatery</h3>
-                         <h4>
-                              Static multi-page website
-                              <br />
-                              HTML, CSS
-                         </h4>
-                         <h5>16 August 2021</h5>
-                    </a>
-                    <a class="card hover-effect" href="./sites/coffee-and-cream/index.html" target="_blank">
-                         <div class="thumbnail-container">
-                              <img src="./images/coffee-and-cream.png" alt="" />
-                         </div>
-                         <h3>Coffee & Cream</h3>
-                         <h4>
-                              Static multi-page website
-                              <br />
-                              HTML, CSS
-                         </h4>
-                         <h5>05 August 2021</h5>
-                    </a>
+      <nav class="mobile shadow2" id="mobile-navbar">
+         <div class="group-1">
+            <div class="">
+               <div class="button icon box overlay-mobile">
+                  <img src="./images/menu-icon.svg" alt="" />
                </div>
-          </section>
-          <!-- script -->
-          <script src="./script/script.js"></script>
-     </body>
+            </div>
+            <img src="./images/logo.png" alt="" />
+            <div class="">
+               <div class="button icon box">
+                  <img src="./images/account-icon.svg" alt="" />
+               </div>
+            </div>
+         </div>
+         <div class="group-2">
+            <div class="mobile-icon-nav">
+               <div class="button icon">
+                  <img src="./images/locations-icon.svg" alt="" />
+               </div>
+               <h3 class="label">Locations</h3>
+            </div>
+            <div class="mobile-icon-nav">
+               <div class="button icon">
+                  <img src="./images/devices-icon.svg" alt="" />
+               </div>
+               <h3 class="label">Devices</h3>
+            </div>
+            <div class="mobile-icon-nav">
+               <div class="button icon">
+                  <img src="./images/recordings-icon.svg" alt="" />
+               </div>
+               <h3 class="label">Recordings</h3>
+            </div>
+            <div class="mobile-icon-nav">
+               <div class="button icon">
+                  <img src="./images/call-icon.svg" alt="" />
+               </div>
+               <h3 class="label">Dial</h3>
+            </div>
+            <div class="mobile-icon-nav">
+               <div class="button icon">
+                  <img src="./images/settings-icon.svg" alt="" />
+               </div>
+               <h3 class="label">Settings</h3>
+            </div>
+         </div>
+      </nav>
+
+      <!-- main section -->
+      <main>
+         <div class="content-container">
+            <!-- header bar -->
+            <header class="desktop">
+               <h1 class="page-title">Dashboard</h1>
+               <img src="./images/logo.png" alt="" />
+            </header>
+            <!-- one -->
+            <div class="panel one">
+               <div class="ov-cell blue-accent shadow2">
+                  <div>
+                     <h2 class="off">Alerts</h2>
+                     <img src="./images/alerts-icon.svg" alt="" />
+                  </div>
+                  <h1 class="white-bold">7</h1>
+               </div>
+               <div class="ov-cell shadow2">
+                  <div>
+                     <h2 class="off">People</h2>
+                     <img src="./images/people-icon.svg" alt="" />
+                  </div>
+                  <h1 class="white-bold">2</h1>
+               </div>
+               <div class="ov-cell shadow2">
+                  <div>
+                     <h2 class="off">Alarms</h2>
+                     <img src="./images/alarms-icon.svg" alt="" />
+                  </div>
+                  <h1 class="white-bold">0</h1>
+               </div>
+               <div class="ov-cell shadow2">
+                  <div>
+                     <h2 class="off">Buzzers</h2>
+                     <img src="./images/buzzers-icon.svg" alt="" />
+                  </div>
+                  <h1 class="white-bold">3</h1>
+               </div>
+               <div class="ov-cell shadow2">
+                  <div>
+                     <h2 class="off">Packages</h2>
+                     <img src="./images/packages-icon.svg" alt="" />
+                  </div>
+                  <h1 class="white-bold">2</h1>
+               </div>
+            </div>
+
+            <!-- two -->
+            <div class="panel two">
+               <h1 class="page-title">Activity</h1>
+               <!-- tabs -->
+               <div class="tab-selector">
+                  <div class="tab highlighted"><p>Front Door</p></div>
+                  <div class="tab"><p>Garage</p></div>
+                  <div class="tab"><p>Lounge</p></div>
+                  <div class="tab"><p>Back Door</p></div>
+                  <div class="tab add"><h1>+</h1></div>
+               </div>
+               <div class="tab-selector-dropdown">
+                  <h3 class="off">Location</h3>
+                  <div>
+                     <img src="./images/dropdown-icon.svg" alt="" />
+                  </div>
+               </div>
+
+               <!-- live screen -->
+               <div class="live-screen shadow2">
+                  <div>
+                     <div></div>
+                     <span>Live</span>
+                  </div>
+                  <img src="./images/lock-blue-icon.svg" alt="" />
+                  <img src="./images/camera-dashboard.png" alt="" />
+               </div>
+
+               <!-- live activity -->
+               <div class="live-activity shadow2">
+                  <img src="./images/graph.png" alt="" />
+               </div>
+            </div>
+
+            <!-- three -->
+            <div class="panel three">
+               <h1 class="page-title">Controls</h1>
+               <!-- panic -->
+               <a href="google.com" class="button panic shadow2">
+                  <div>
+                     <img src="./images/panic-icon.svg" alt="" />
+                     <h1 class="bold-white">Panic</h1>
+                  </div>
+               </a>
+
+               <!-- security mode -->
+               <div class="block-1 shadow2">
+                  <h3>Security mode</h3>
+                  <h1 class="blue-accent">Away</h1>
+                  <div>
+                     <img src="./images/unlock-mode.svg" alt="" />
+                     <img src="./images/lock-mode.svg" alt="" />
+                     <img src="./images/night-mode.svg" alt="" />
+                     <img src="./images/home-mode.svg" alt="" />
+                     <div class="shadow-inset">
+                        <img src="./images/away-mode.svg" alt="" />
+                     </div>
+                  </div>
+               </div>
+               <!-- manual controls -->
+               <div class="block-1 shadow2">
+                  <h3>Manual controls</h3>
+
+                  <!-- toggle switch -->
+                  <div>
+                     <div class="toggle-switch-label">
+                        <h3 class="off">Lights</h3>
+                        <div>
+                           <img src="./images/light-icon.svg" alt="" />
+
+                           <div class="toggle-switch shadow-inset">
+                              <div class="circle"></div>
+                           </div>
+                        </div>
+                     </div>
+                     <!-- toggle switch -->
+                     <div class="toggle-switch-label">
+                        <h3 class="off">Smart Locks</h3>
+                        <div>
+                           <img src="./images/lock-icon.svg" alt="" />
+
+                           <div class="toggle-switch shadow-inset on">
+                              <div class="circle"></div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+
+               <!-- intercom -->
+               <div class="block-1 shadow2">
+                  <h3>Intercom</h3>
+                  <h3 class="off">Press & Hold</h3>
+                  <div class="button fat blue-accent"><h3>Push to Talk</h3></div>
+               </div>
+            </div>
+
+            <!-- four -->
+            <div class="panel four shadow2">
+               <img src="./images/graphic-dashboard.png" alt="" />
+               <div>
+                  <h1 class="page-title">Nice! Everything is working</h1>
+                  <p class="blue">In case of emergency hold down Panic button for 3 seconds to alert law enforcement</p>
+                  <div>
+                     <div></div>
+                     <div></div>
+                     <div></div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </main>
+
+      <!-- script -->
+      <script src="./js/script.js"></script>
+   </body>
 </html>
-<!-- <div class="card hover-effect">
-     <div class="thumbnail-container">
-          <img src="./images/gallery2.jpeg" alt="" />
-     </div>
-     <h3>Project Title</h3>
-     <h4>Lorem ipsum dolor sit amet.</h4>
-     <h5>08 September 2022</h5>
-</div> -->

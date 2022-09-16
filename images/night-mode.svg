@@ -1,0 +1,15 @@
+<svg id="Group_81" data-name="Group 81" xmlns="http://www.w3.org/2000/svg" width="31" height="20" viewBox="0 0 31 20">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: rgba(255,255,255,0);
+      }
+
+      .cls-2 {
+        fill: #c5c9cc;
+      }
+    </style>
+  </defs>
+  <rect id="Rectangle_43" data-name="Rectangle 43" class="cls-1" width="31" height="20"/>
+  <path id="Icon_awesome-moon" data-name="Icon awesome-moon" class="cls-2" d="M10.913,18A8.983,8.983,0,0,0,17.9,14.667a.422.422,0,0,0-.406-.68A7.05,7.05,0,0,1,12.69.932.422.422,0,0,0,12.558.15,9,9,0,1,0,10.913,18Z" transform="translate(5.087 1)"/>
+</svg>

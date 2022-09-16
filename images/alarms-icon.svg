@@ -1,0 +1,10 @@
+<svg id="Icon_ionic-md-alert" data-name="Icon ionic-md-alert" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #c5c9cc;
+      }
+    </style>
+  </defs>
+  <path id="Icon_ionic-md-alert-2" data-name="Icon ionic-md-alert" class="cls-1" d="M13.375,3.375a10,10,0,1,0,10,10A10.029,10.029,0,0,0,13.375,3.375Zm1.154,15H12.221V16.452h2.308Zm0-4.231H12.221V7.99h2.308Z" transform="translate(-3.375 -3.375)"/>
+</svg>

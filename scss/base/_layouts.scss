@@ -1,0 +1,86 @@
+@use "../abstracts/debug" as db;
+@use "../abstracts/colors" as cols;
+@use "../abstracts/gapsets" as gaps;
+@use "../abstracts/variables" as vars;
+@use "../abstracts/effects" as fx;
+@use "../abstracts/mixins" as mx;
+@use "../abstracts//mediaqueries" as mq;
+body {
+   // * {
+   //      outline: 1px solid yellow;
+   // }
+   nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+   }
+   main {
+      width: 100%;
+   }
+
+   .content-container {
+      margin: 0 auto;
+      padding-left: 75px;
+      width: max-content;
+      display: grid;
+      gap: gaps.$base-gap;
+      grid-template-columns: 400px 600px 300px; //change
+      grid-template-rows: auto auto auto;
+      grid-template-areas:
+         "head     head      head"
+         "four     one       one"
+         "four     two       three";
+
+      @media screen and (max-width: mq.$bp1) {
+         grid-template-columns: 600px 300px;
+         grid-template-areas:
+            "head      head"
+            "one      one"
+            "two      three"
+            "four     four";
+      }
+      @media screen and (max-width: mq.$bp2) {
+         padding: 20px;
+         max-width: 650px;
+         width: 100%;
+         grid-template-columns: 100%;
+         grid-template-areas:
+            "one"
+            "two"
+            "three"
+            "four";
+         gap: 50px;
+      }
+   }
+
+   // panel allocations
+   .content-container {
+      header {
+         grid-area: head;
+      }
+      .one {
+         grid-area: one;
+         .testbox {
+            height: 100px;
+            background-color: red;
+         }
+      }
+      .two {
+         grid-area: two;
+         .testbox:first-child {
+            height: 400px;
+            background-color: red;
+         }
+         .testbox:last-child {
+            height: 200px;
+            background-color: red;
+         }
+      }
+      .three {
+         grid-area: three;
+      }
+      .four {
+         grid-area: four;
+      }
+   }
+}

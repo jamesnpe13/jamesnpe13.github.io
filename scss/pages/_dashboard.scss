@@ -1,0 +1,192 @@
+@use "../abstracts/debug" as db;
+@use "../abstracts/colors" as cols;
+@use "../abstracts/gapsets" as gaps;
+@use "../abstracts/variables" as vars;
+@use "../abstracts/effects" as fx;
+@use "../abstracts/mixins" as mx;
+@use "../abstracts//mediaqueries" as mq;
+
+.content-container {
+   padding-bottom: 20px;
+   // ov-cells
+   .panel.one {
+      display: flex;
+      justify-content: space-between;
+      gap: gaps.$base-gap;
+      & > * {
+         flex-grow: 1;
+      }
+   }
+   .panel.two {
+      display: flex;
+      flex-direction: column;
+      gap: gaps.$base-gap;
+      //  tab selector
+      .tab-selector {
+         display: flex;
+         justify-content: space-between;
+      }
+      .tab-selector-dropdown {
+         display: none;
+         height: 35px;
+         border-radius: vars.$border-radius-min;
+         background-color: cols.$grey-3;
+         overflow: hidden;
+         position: relative;
+         justify-content: center;
+         align-items: center;
+         div {
+            position: absolute;
+            right: 0;
+            width: 45px;
+            height: 100%;
+            background-color: cols.$blue-off;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            img {
+               transform: rotate(180deg);
+            }
+         }
+      }
+      // live-screen
+      .live-screen {
+         height: 330px;
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         overflow: hidden;
+         border-radius: vars.$border-radius-med;
+         position: relative;
+         & > div:first-child {
+            position: absolute;
+            top: 20px;
+            left: 35px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            & > div {
+               background-color: cols.$red;
+               width: 10px;
+               height: 10px;
+               border-radius: 100%;
+            }
+            & > span {
+               color: cols.$red;
+            }
+         }
+         & > img:first-of-type {
+            position: absolute;
+            top: 20px;
+            right: 35px;
+         }
+         & > img:last-of-type {
+            height: 100%;
+            object-fit: coverr;
+         }
+      }
+      .live-activity {
+         background-color: cols.$grey-3;
+         height: 125px;
+         flex-grow: 1;
+         border-radius: vars.$border-radius-med;
+         display: flex;
+         align-items: center;
+         justify-content: center;
+      }
+   }
+   .panel.three {
+      display: flex;
+      flex-direction: column;
+      gap: gaps.$base-gap;
+      & > .block-1:first-of-type {
+         & > div:first-of-type {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+            div {
+               display: flex;
+               justify-content: center;
+               align-items: center;
+               padding: 3px 10px;
+               border-radius: vars.$border-radius-min;
+               background-color: cols.$blue-off;
+            }
+         }
+      }
+      & > .block-1:nth-of-type(2) {
+         & > div {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 20px;
+         }
+      }
+      & > .block-1:nth-of-type(3) {
+         & > .button {
+            margin-top: 20px;
+         }
+      }
+   }
+   .panel.four {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      background-color: cols.$grey-1;
+      border-radius: vars.$border-radius-med;
+      border: 3px solid cols.$blue-off;
+      padding: vars.$panel-padding;
+      p {
+         margin-top: 30px;
+      }
+      & > div {
+         & > div {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            margin-top: 50px;
+            margin-bottom: 50px;
+            div {
+               width: 8px;
+               height: 8px;
+               background-color: cols.$blue-off;
+               border-radius: 100%;
+            }
+         }
+      }
+   }
+}
+@media screen and (max-width: mq.$bp2) {
+   main .content-container {
+      padding-top: 100px;
+
+      
+      .panel.one {
+         display: grid;
+         grid-template-columns: 1fr 1fr;
+         width: 100%;
+         .ov-cell {
+            width: 100%;
+         }
+         .ov-cell:first-child {
+            grid-column: span 2;
+         }
+      }
+      .panel.two {
+         .tab-selector {
+            display: none;
+         }
+         .tab-selector-dropdown {
+            display: flex;
+         }
+         .live-activity {
+            overflow: hidden;
+            // img {
+            //    display: none;
+            // }
+         }
+      }
+   }
+}
