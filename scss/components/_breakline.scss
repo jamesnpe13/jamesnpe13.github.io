@@ -1,0 +1,35 @@
+@use "../abstracts/colors" as cols;
+@use "../abstracts/variables" as vars;
+
+.breakline {
+   background-color: cols.$primary-orange;
+   width: 140px;
+   height: 15px;
+   // margin: 20px 0;
+
+   &.responsive {
+      width: 9vw;
+      height: 1vw;
+   }
+   &.orange {
+      background-color: cols.$primary-orange;
+   }
+   &.blue {
+      background-color: cols.$primary-blue;
+   }
+   &.white {
+      background-color: cols.$primary-white;
+   }
+   &.black {
+      background-color: cols.$primary-black;
+   }
+   &.grey1 {
+      background-color: cols.$grey-3;
+   }
+   &.grey2 {
+      background-color: cols.$grey-2;
+   }
+   &.pale-orange {
+      background-color: cols.$orange-1;
+   }
+}

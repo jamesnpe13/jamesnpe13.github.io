@@ -1,0 +1,44 @@
+@use "../abstracts/variables" as vars;
+@use "../abstracts/colors" as cols;
+@use "../abstracts/debug" as db;
+@use "../abstracts/effects" as fx;
+
+section {
+   position: relative;
+   display: grid;
+   grid-template-columns: repeat(14, 1fr);
+   align-items: center;
+   min-height: 500px;
+
+   .content-container {
+      margin: vars.$section-padding;
+      grid-column: 3 / 13;
+      grid-row: 1 / 2;
+      display: grid;
+      grid-template-columns: repeat(10, 1fr);
+
+      gap: vars.$inline-gap;
+
+      .panel {
+         display: flex;
+         flex-direction: column;
+         align-items: flex-start;
+         justify-content: center;
+      }
+      .panel:first-child {
+         grid-column: 1 / 6;
+      }
+      .panel:last-child {
+         grid-column: 6 / -1;
+      }
+   }
+   & > .background {
+      width: 100%;
+      z-index: -5;
+      grid-column: 1 / -1;
+      grid-row: 1 / 2;
+   }
+}
+
+
+

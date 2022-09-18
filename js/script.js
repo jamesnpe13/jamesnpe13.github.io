@@ -1,33 +1,38 @@
-let navBar = document.getElementById("navbar");
-let overLayMobile = document.querySelector(".overlay-mobile");
-let mobileNavBar = document.getElementById("mobile-navbar");
-let navLabel = document.querySelectorAll(".label");
-let mobileIconGroup = document.querySelectorAll(".mobile-icon-nav");
-// navBar.addEventListener("mouseover", function1);
-// navBar.addEventListener("mouseout", function2);
-
-// timer
-let timer;
-function runTimer() {}
-
-navBar.onmouseenter = function () {
-   timer = setTimeout(function () {
-      for (let i = 0; i < navLabel.length; i++) {
-         navLabel[i].style.display = "block";
+function reveal() {
+   var reveals = document.querySelectorAll(".reveal");
+   for (var i = 0; i < reveals.length; i++) {
+      var windowHeight = window.innerHeight;
+      var elementTop = reveals[i].getBoundingClientRect().top;
+      var elementVisible = 150;
+      if (elementTop < windowHeight - elementVisible) {
+         reveals[i].classList.add("active");
+      } else {
+         reveals[i].classList.remove("active");
       }
-   }, 150);
-};
-navBar.onmouseleave = function () {
-   clearTimeout(timer);
-   for (let i = 0; i < navLabel.length; i++) {
-      navLabel[i].style.display = "none";
    }
-};
+}
+window.addEventListener("scroll", reveal);
 
-// mobile
-overLayMobile.addEventListener("click", function () {
-   mobileNavBar.classList.add = "expanded";
-   for (let i = 0; i < mobileIconGroup.length; i++) {
-      mobileIconGroup[i].style.display = "block";
-   }
+// To check the scroll position on page load
+reveal();
+
+// menu overlay
+var menuStat = Boolean;
+var hamburgerBtn = document.querySelector(".hamburger");
+var closeBtn = document.querySelector(".close");
+var menuOl = document.querySelector(".menu-overlay");
+
+hamburgerBtn.addEventListener("click", () => {
+   menuOl.classList.add("open");
+   menuStat = true;
 });
+closeBtn.addEventListener("click", () => {
+   menuOl.classList.remove("open");
+   menuStat = false;
+});
+
+onmousedown = function (e) {
+   if (e.target != menuOl) {
+      menuOl.classList.remove("open");
+   }
+};
