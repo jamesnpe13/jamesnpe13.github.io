@@ -1,39 +1,75 @@
-@use "../abstracts/colors" as cols;
+@use "../abstracts/effects" as fx;
 @use "../abstracts/variables" as vars;
-
-.button {
-   user-select: none;
-   cursor: pointer;
-   padding: 6px 30px 10px 30px;
-   border-radius: vars.$border-radius;
-   border: 2px solid;
-   width: max-content;
-   &.small {
-      padding: 3px 6px 5px 6px;
-      border: 1px solid;
-   }
-   border-color: cols.$primary-grey;
-   color: cols.$primary-grey;
-   &.orange {
-      color: cols.$primary-orange;
-      border-color: cols.$primary-orange;
-   }
-   &.blue {
-      color: cols.$primary-blue;
-      border-color: cols.$primary-grey;
-   }
-   &.white {
-      color: cols.$primary-white;
-      border-color: cols.$primary-white;
-   }
-   &.black {
-      color: cols.$primary-black;
-      border-color: cols.$primary-black;
-   }
-}
+@use "../abstracts/colors" as cols;
 
 .button-container {
+   width: 350px;
    display: flex;
-   flex-direction: row;
-   gap: vars.$inline-gap;
+   flex-direction: column;
+   gap: 20px;
+}
+
+
+.button {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   user-select: none;
+   cursor: pointer;
+   &.icon {
+      width: 50px;
+      height: 50px;
+   }
+   &.box {
+      @include fx.dropshadow-close();
+      border-radius: vars.$border-radius-med;
+      background-color: cols.$grey-3;
+   }
+   &.panic {
+      background-color: cols.$grey-3;
+      height: 77px;
+      border-radius: vars.$border-radius-med;
+      border: 3px solid cols.$red;
+      & > div:first-child {
+         display: flex;
+         align-items: center;
+         justify-content: center;
+         gap: 10px;
+         img {
+            transform: translateY(2px) scale(1.06);
+         }
+      }
+   }
+   &.destructive {
+      background-color: cols.$grey-3;
+      border-radius: vars.$border-radius-med;
+      border: 2px solid cols.$red;
+
+   }
+   &.fat {
+      background-color: cols.$grey-3;
+      height: 60px;
+      border-radius: vars.$border-radius-med;
+      & > div:first-child {
+         display: flex;
+         align-items: center;
+         justify-content: center;
+         gap: 10px;
+         img {
+            transform: translateY(2px) scale(1.06);
+         }
+      }
+   }
+   &.blue-accent {
+      background-color: cols.$blue-accent;
+      box-shadow: 4px 4px 20px rgba(0, 153, 255, 0.452);
+   }
+   &.off {
+      background-color: cols.$blue-off;
+      box-shadow: cols.$blue-off;
+   }
+   &.skinny {
+      border-radius: vars.$border-radius-med;
+      height: 36px;
+   }
 }

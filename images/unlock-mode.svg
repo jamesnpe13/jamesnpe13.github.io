@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="31" height="20" viewBox="0 0 31 20">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: rgba(255,255,255,0);
+      }
+
+      .cls-2 {
+        fill: #c5c9cc;
+      }
+    </style>
+  </defs>
+  <g id="Group_79" data-name="Group 79" transform="translate(0.407)">
+    <rect id="Rectangle_41" data-name="Rectangle 41" class="cls-1" width="31" height="20" transform="translate(-0.407)"/>
+    <path id="Icon_awesome-lock-open" data-name="Icon awesome-lock-open" class="cls-2" d="M14.889,0A5.378,5.378,0,0,0,9.562,5.4V7.875H1.687A1.688,1.688,0,0,0,0,9.562v6.75A1.688,1.688,0,0,0,1.687,18H14.062a1.688,1.688,0,0,0,1.687-1.687V9.562a1.688,1.688,0,0,0-1.687-1.687H12.375v-2.5a2.531,2.531,0,1,1,5.062-.032V8.156A.842.842,0,0,0,18.281,9h1.125a.842.842,0,0,0,.844-.844V5.344A5.35,5.35,0,0,0,14.889,0Z" transform="translate(5 0.878)"/>
+  </g>
+</svg>

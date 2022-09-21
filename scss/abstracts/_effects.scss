@@ -1,13 +1,18 @@
-@use "../abstracts/variables" as vars;
-@use "../abstracts/colors" as cols;
-
-@mixin drop-shadow {
-   // filter: drop-shadow( 5px 5px 21px cols.$shadow-colour);
-   box-shadow: 5px 5px 21px cols.$shadow-colour;
+@mixin dropshadow-close {
+   box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.46);
 }
-@mixin glass {
-   filter: brightness(3) grayscale(1);
+@mixin dropshadow-far {
+   box-shadow: 4px 4px 18px #00000075;
 }
-// @mixin drop-shadow-2 {
-//     filter: drop-shadow( 5px 5px 8px cols.$shadow-colour);
-// }
+@mixin dropshadow-inset {
+   box-shadow: inset 4px 4px 5px rgba(0, 0, 0, 0.349);
+}
+.shadow1 {
+   @include dropshadow-close();
+}
+.shadow2 {
+   @include dropshadow-far();
+}
+.shadow-inset {
+   @include dropshadow-inset();
+}

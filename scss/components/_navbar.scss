@@ -1,0 +1,110 @@
+@use "../abstracts/debug" as db;
+@use "../abstracts/colors" as cols;
+@use "../abstracts/gapsets" as gaps;
+@use "../abstracts/variables" as vars;
+@use "../abstracts/effects" as fx;
+@use "../abstracts/mixins" as mx;
+@use "../abstracts//mediaqueries" as mq;
+
+nav {
+   z-index: 100;
+   background-color: cols.$grey-3;
+   position: fixed;
+   left: 0;
+   top: 0;
+   transition: all 0.4s;
+}
+nav.desktop {
+   height: 100vh;
+   width: 72px;
+   padding-left: 10px;
+   display: flex;
+   flex-direction: column;
+   align-items: flex-start;
+   justify-content: center;
+
+   .label-desktop {
+      display: none;
+   }
+
+   .account-icon {
+      position: absolute;
+      top: 20px;
+      left: 10px;
+   }
+   .button-group-container {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+   }
+   .button-label-container {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      user-select: none;
+   }
+   &.nav-expand {
+      width: 250px;
+   }
+}
+nav.mobile {
+   width: 100%;
+   height: 75px;
+   padding: 10px;
+   .group-1 {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      & > a {
+         height: 60%;
+         display: flex;
+         align-items: center;
+         justify-content: center;
+      }
+   }
+   .button-group-container {
+      margin-top: 60px;
+      width: 100%;
+      padding-bottom: 50px;
+      display: grid;
+      display: none;
+      place-items: center;
+      grid-template-columns: repeat(6, 1fr);
+      gap: 20px;
+
+      @media screen and (max-width: 500px) {
+         grid-template-columns: repeat(3, 1fr);
+      }
+      .button-label-container {
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+         justify-content: center;
+      }
+   }
+   &.nav-expand {
+      height: 320px;
+   }
+}
+
+@media screen and (min-width: mq.$bp2) {
+   nav {
+      &.desktop {
+         display: fixed;
+      }
+      &.mobile {
+         display: none;
+      }
+   }
+}
+@media screen and (max-width: mq.$bp2) {
+   nav {
+      &.desktop {
+         display: none;
+      }
+      &.mobile {
+         display: fixed;
+      }
+   }
+}

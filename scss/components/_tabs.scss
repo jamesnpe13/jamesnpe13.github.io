@@ -1,0 +1,27 @@
+@use "../abstracts/debug" as db;
+@use "../abstracts/colors" as cols;
+@use "../abstracts/gapsets" as gaps;
+@use "../abstracts/variables" as vars;
+
+.tab {
+   user-select: none;
+   cursor: pointer;
+   height: 30px;
+   width: 125px;
+   border-radius: 15px;
+   background-color: cols.$grey-3;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   &.highlighted {
+      background-color: cols.$blue-off;
+   }
+   &.add {
+      border: 2px dashed grey;
+      width: 55px;
+      h1 {
+         user-select: none;
+         transform: translateY(-3px);
+      }
+   }
+}

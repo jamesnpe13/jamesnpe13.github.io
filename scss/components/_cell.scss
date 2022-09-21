@@ -1,0 +1,19 @@
+@use "../abstracts/colors" as cols;
+@use "../abstracts/gapsets" as gaps;
+@use "../abstracts/variables" as vars;
+
+.cell {
+    background-color: cols.$grey-3;
+    height: auto;
+    flex: 1 1 300px;
+    border-radius: vars.$border-radius-med;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 0px;
+    padding: gaps.$gap-column-desktop;
+    div {
+        display: flex;
+        justify-content: space-between;
+    }
+}

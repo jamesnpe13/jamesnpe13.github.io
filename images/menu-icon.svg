@@ -1,0 +1,10 @@
+<svg id="menu" xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 26 26">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fff;
+      }
+    </style>
+  </defs>
+  <path id="Icon_metro-apps" data-name="Icon metro-apps" class="cls-1" d="M7.712,14.212h6.5v-6.5h-6.5Zm9.75,19.5h6.5v-6.5h-6.5Zm-9.75,0h6.5v-6.5h-6.5Zm0-9.75h6.5v-6.5h-6.5v6.5Zm9.75,0h6.5v-6.5h-6.5v6.5Zm9.75-16.25v6.5h6.5v-6.5Zm-9.75,6.5h6.5v-6.5h-6.5Zm9.75,9.75h6.5v-6.5h-6.5Zm0,9.75h6.5v-6.5h-6.5Z" transform="translate(-7.712 -7.712)"/>
+</svg>

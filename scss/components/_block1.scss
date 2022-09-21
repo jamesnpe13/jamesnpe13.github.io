@@ -1,0 +1,11 @@
+@use "../abstracts/debug" as db;
+@use "../abstracts/colors" as cols;
+@use "../abstracts/gapsets" as gaps;
+@use "../abstracts/variables" as vars;
+.block-1 {
+     min-height: 100px;
+     height: max-content;
+     border-radius: vars.$border-radius-med;
+     background-color: cols.$grey-3;
+     padding: vars.$panel-padding;
+}
