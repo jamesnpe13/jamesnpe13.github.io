@@ -47,7 +47,8 @@ main.device {
       @media screen and (max-width: mq.$bp2) {
          padding: 20px;
          h1 {
-            width: 80%;
+            width: 100%;
+            font-size: 1.5em;
          }
          img {
             width: 200px;

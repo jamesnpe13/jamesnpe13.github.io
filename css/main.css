@@ -690,7 +690,8 @@ main.locations .panel.one h1 {
     padding: 20px;
   }
   main.locations .panel.one h1 {
-    width: 80%;
+    width: 100%;
+    font-size: 1.5em;
   }
   main.locations .panel.one img {
     width: 200px;
@@ -752,7 +753,8 @@ main.device .panel.one h1 {
     padding: 20px;
   }
   main.device .panel.one h1 {
-    width: 80%;
+    width: 100%;
+    font-size: 1.5em;
   }
   main.device .panel.one img {
     width: 200px;
@@ -838,7 +840,8 @@ main.device .panel.one h1 {
     padding: 20px;
   }
   main.device .panel.one h1 {
-    width: 80%;
+    width: 100%;
+    font-size: 1.5em;
   }
   main.device .panel.one img {
     width: 200px;
@@ -905,7 +908,7 @@ main.recordings .panel.one {
 }
 main.recordings .panel.one img {
   width: 300px;
-  transform: translateX(-5%);
+  transform: translateX(10%);
 }
 main.recordings .panel.one h1 {
   max-width: 300px;
@@ -915,7 +918,8 @@ main.recordings .panel.one h1 {
     padding: 20px;
   }
   main.recordings .panel.one h1 {
-    width: 80%;
+    width: 100%;
+    font-size: 1.5em;
   }
   main.recordings .panel.one img {
     width: 200px;
