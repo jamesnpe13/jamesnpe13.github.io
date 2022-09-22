@@ -1,0 +1,51 @@
+@use "../abstracts/effects" as fx;
+@use "../abstracts/variables" as vars;
+@use "../abstracts/colors" as cols;
+
+.gallery-section {
+   // debug
+
+   // -------------------
+   width: 100%;
+   padding: 20px;
+   border-radius: 15px;
+   height: auto;
+   display: flex;
+   flex-direction: column;
+   gap: 20px;
+   .text-container {
+      display: flex;
+      width: 100%;
+      justify-content: space-between;
+   }
+   .cell-group {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+   }
+   .cell-container {
+      width: 300px;
+      height: auto;
+      padding: 20px;
+      background: cols.$grey-3;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      border-radius: 10px;
+      gap: 20px;
+      flex-grow: 1;
+   }
+   img {
+      width: 280px;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 10px;
+   }
+   .info-container {
+      display: flex;
+      width: 100%;
+      justify-content: space-between;
+   }
+}

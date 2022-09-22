@@ -1,0 +1,26 @@
+@use "../abstracts/debug" as db;
+@use "../abstracts/colors" as cols;
+@use "../abstracts/gapsets" as gaps;
+@use "../abstracts/variables" as vars;
+@use "../abstracts/effects" as fx;
+@use "../abstracts/mixins" as mx;
+@use "../abstracts//mediaqueries" as mq;
+
+main {
+   display: grid;
+   width: 100%;
+   padding-bottom: 50px;
+}
+.content-container {
+   grid-column: 1 / -1;
+   grid-row: 1 / -1;
+   padding: 0 50px;
+   margin-left: 75px;
+   @media screen and (max-width: mq.$bp2) {
+      margin-left: 0;
+      padding: 75px 20px;
+      header img {
+         display: none;
+      }
+   }
+}

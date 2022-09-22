@@ -1,0 +1,18 @@
+@use "../abstracts/debug" as db;
+@use "../abstracts/colors" as cols;
+@use "../abstracts/gapsets" as gaps;
+@use "../abstracts/variables" as vars;
+.ov-cell {
+     height: 100px;
+     width: 100px;
+     background-color: cols.$grey-3;
+     border-radius: vars.$border-radius-med;
+     padding: vars.$ovcell-padding;
+     & > div {
+        display: flex;
+        justify-content: space-between;
+     }
+     &.blue-accent {
+      border: 3px solid cols.$blue-accent;
+     }
+}

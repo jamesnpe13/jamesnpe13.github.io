@@ -1,0 +1,239 @@
+@use "../abstracts/debug" as db;
+@use "../abstracts/colors" as cols;
+@use "../abstracts/gapsets" as gaps;
+@use "../abstracts/variables" as vars;
+@use "../abstracts/effects" as fx;
+@use "../abstracts/mixins" as mx;
+@use "../abstracts//mediaqueries" as mq;
+
+// debug
+
+// -------------
+
+main.dashboard {
+   .content-container {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(4, auto);
+      gap: 20px;
+      grid-template-areas:
+         "head    head     head"
+         "one    one      one"
+         "four    two      three"
+         "four    two      three";
+
+      @media screen and (max-width: mq.$bp1) {
+         grid-template-columns: repeat(2, 1fr);
+         grid-template-rows: repeat(5, auto);
+         grid-template-areas:
+            "head     head"
+            "four    four"
+            "one     one"
+            "two     three"
+            "two      three";
+      }
+      @media screen and (max-width: mq.$bp2) {
+         grid-template-columns: 1fr;
+         grid-template-rows: repeat(6, auto);
+         grid-template-areas:
+            "head"
+            "four"
+            "one"
+            "two"
+            "three";
+      }
+
+      // grid allocation
+      header {
+         grid-area: head;
+      }
+
+      .panel.one {
+         grid-area: one;
+         display: flex;
+         gap: 20px;
+         justify-content: space-between;
+         .ov-cell {
+            width: 100%;
+         }
+         @media screen and (max-width: mq.$bp2) {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            .ov-cell:first-of-type {
+               grid-column: span 2;
+            }
+         }
+      }
+
+      .panel.two {
+         width: 100%;
+         grid-area: two;
+         display: flex;
+         flex-direction: column;
+         gap: 20px;
+         .tab-selector-dropdown {
+            display: none;
+            @media screen and (max-width: mq.$bp2) {
+               display: flex;
+               background-color: cols.$grey-3;
+               width: 100%;
+               height: 55px;
+               border-radius: 5px;
+               padding-left: 12px;
+               align-items: center;
+               justify-content: space-between;
+               overflow: hidden;
+               div {
+                  background-color: cols.$blue-off;
+                  height: 100%;
+                  width: 50px;
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  img {
+                     transform: rotate(180deg);
+                  }
+               }
+            }
+         }
+         .tab-selector {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+            @media screen and (max-width: mq.$bp2) {
+               display: none;
+               & > div {
+                  width: 100%;
+               }
+            }
+         }
+         .live-screen {
+            width: 100%;
+            height: 100%;
+            padding: 0;
+            position: relative;
+            overflow: hidden;
+            .live-indicator {
+               position: absolute;
+               top: 20px;
+               left: 20px;
+               display: flex;
+               align-items: center;
+               gap: 10px;
+               color: cols.$red;
+               div {
+                  height: 12px;
+                  width: 12px;
+                  border-radius: 100%;
+                  background-color: cols.$red;
+               }
+            }
+            .lock-icon {
+               position: absolute;
+               top: 20px;
+               right: 20px;
+            }
+            .live-video {
+               height: 100%;
+               width: 100%;
+               object-fit: cover;
+            }
+         }
+         .live-activity {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 10px 20px;
+            width: 100%;
+            height: 200px;
+            img {
+               height: 100%;
+               width: 100%;
+               object-fit: contain;
+            }
+         }
+      }
+
+      .panel.three {
+         grid-area: three;
+         display: flex;
+         flex-direction: column;
+         gap: 20px;
+
+         .panic {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+         }
+         .security-mode {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+
+            .buttons {
+               display: flex;
+               justify-content: space-around;
+               .backdrop {
+                  background-color: cols.$blue-accent;
+                  border-radius: 8px;
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+                  padding: 5px 8px;
+               }
+            }
+         }
+         .manual-controls {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            .switch-container {
+               display: flex;
+               justify-content: center;
+               gap: 50px;
+            }
+         }
+         .intercom {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+         }
+      }
+
+      .panel.four {
+         height: auto;
+         grid-area: four;
+         padding: 50px 20px;
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+         justify-content: center;
+         gap: 20px;
+         .dots-container {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+         }
+         .info {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            text-align: center;
+         }
+         .dots {
+            width: 8px;
+            height: 8px;
+            border-radius: 100%;
+            background-color: cols.$blue-off;
+         }
+         @media screen and (max-width: mq.$bp2) {
+            padding: 30px;
+            padding-top: 0;
+            gap: 0;
+            img {
+               width: 200px;
+            }
+         }
+      }
+   }
+}

@@ -4,276 +4,32 @@
       <meta charset="UTF-8" />
       <meta http-equiv="X-UA-Compatible" content="IE=edge" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <link rel="stylesheet" href="./css/main.css" />
-      <title>Tiaki | Dashboard</title>
+      <title>James Repo | Public</title>
+      <style>
+         body {
+            display: grid;
+            width: 100%;
+            height: 100vh;
+            place-items: center;
+            font-family: Arial, Helvetica, sans-serif;
+         }
+         div {
+            border: 1px solid grey;
+            padding: 50px;
+            border-radius: 20px;
+            box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.21);
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+         }
+      </style>
    </head>
    <body>
-      <!-- -----------navs -->
-      <!-- nav desktop -->
-      <nav class="desktop shadow2" id="navbar-desktop">
-         <div class="button-label-container account-icon">
-            <a href="" class="button icon box">
-               <img src="./images/account-icon.svg" alt="" />
-            </a>
-            <h3 class="label-desktop">Account</h3>
-         </div>
-         <div class="button-group-container">
-            <div class="button-label-container">
-               <a href="./index.html" class="button icon">
-                  <img src="./images/dashboard-icon.svg" alt="" />
-               </a>
-               <h3 class="label-desktop">Dashboard</h3>
-            </div>
-            <div class="button-label-container">
-               <a href="./locations.html" class="button icon">
-                  <img src="./images/locations-icon.svg" alt="" />
-               </a>
-               <h3 class="label-desktop">Locations</h3>
-            </div>
-            <div class="button-label-container">
-               <a href="" class="button icon">
-                  <img src="./images/devices-icon.svg" alt="" />
-               </a>
-               <h3 class="label-desktop">Devices</h3>
-            </div>
-            <div class="button-label-container">
-               <a href="" class="button icon">
-                  <img src="./images/recordings-icon.svg" alt="" />
-               </a>
-               <h3 class="label-desktop">Recordings</h3>
-            </div>
-            <div class="button-label-container">
-               <a href="" class="button icon">
-                  <img src="./images/call-icon.svg" alt="" />
-               </a>
-               <h3 class="label-desktop">Call</h3>
-            </div>
-            <div class="button-label-container">
-               <a href="" class="button icon">
-                  <img src="./images/settings-icon.svg" alt="" />
-               </a>
-               <h3 class="label-desktop">Settings</h3>
-            </div>
-         </div>
-      </nav>
-      <!-- nav mobile -->
-      <nav class="mobile shadow2" id="navbar-mobile">
-         <div class="group-1">
-            <div class="button-label-container" id="mobile-menu-button">
-               <div class="button icon box">
-                  <img src="./images/menu-icon.svg" alt="" />
-               </div>
-            </div>
-            <a href="./index.html">
-               <img src="./images/logo.png" alt="" />
-            </a>
-            <div class="button-label-container account-icon">
-               <a href="" class="button icon box">
-                  <img src="./images/account-icon.svg" alt="" />
-               </a>
-            </div>
-         </div>
-         <div class="button-group-container mobile-button-group">
-            <div class="button-label-container">
-               <a href="./index.html" class="button icon">
-                  <img src="./images/dashboard-icon.svg" alt="" />
-               </a>
-               <h3 class="label">Dashboard</h3>
-            </div>
-            <div class="button-label-container">
-               <a href="./locations.html" class="button icon">
-                  <img src="./images/locations-icon.svg" alt="" />
-               </a>
-               <h3 class="label">Locations</h3>
-            </div>
-            <div class="button-label-container">
-               <a href="" class="button icon">
-                  <img src="./images/devices-icon.svg" alt="" />
-               </a>
-               <h3 class="label">Devices</h3>
-            </div>
-            <div class="button-label-container">
-               <a href="" class="button icon">
-                  <img src="./images/recordings-icon.svg" alt="" />
-               </a>
-               <h3 class="label">Recordings</h3>
-            </div>
-            <div class="button-label-container">
-               <a href="" class="button icon">
-                  <img src="./images/call-icon.svg" alt="" />
-               </a>
-               <h3 class="label">Call</h3>
-            </div>
-            <div class="button-label-container">
-               <a href="" class="button icon">
-                  <img src="./images/settings-icon.svg" alt="" />
-               </a>
-               <h3 class="label">Settings</h3>
-            </div>
-         </div>
-      </nav>
-
-      <!-- ------------ -->
-      <main class="dashboard">
-         <div class="content-container">
-            <!-- header -->
-            <header class="desktop">
-               <h1 class="page-title">Dashboard</h1>
-               <img src="./images/logo.png" alt="" />
-            </header>
-            <!-- one -->
-            <div class="panel one">
-               <div class="ov-cell blue-accent shadow2">
-                  <div>
-                     <h2 class="off">Alerts</h2>
-                     <img src="./images/alerts-icon.svg" alt="" />
-                  </div>
-                  <h1 class="white-bold">7</h1>
-               </div>
-               <div class="ov-cell shadow2">
-                  <div>
-                     <h2 class="off">People</h2>
-                     <img src="./images/people-icon.svg" alt="" />
-                  </div>
-                  <h1 class="white-bold">2</h1>
-               </div>
-               <div class="ov-cell shadow2">
-                  <div>
-                     <h2 class="off">Alarms</h2>
-                     <img src="./images/alarms-icon.svg" alt="" />
-                  </div>
-                  <h1 class="white-bold">0</h1>
-               </div>
-               <div class="ov-cell shadow2">
-                  <div>
-                     <h2 class="off">Buzzers</h2>
-                     <img src="./images/buzzers-icon.svg" alt="" />
-                  </div>
-                  <h1 class="white-bold">3</h1>
-               </div>
-               <div class="ov-cell shadow2">
-                  <div>
-                     <h2 class="off">Packages</h2>
-                     <img src="./images/packages-icon.svg" alt="" />
-                  </div>
-                  <h1 class="white-bold">2</h1>
-               </div>
-            </div>
-
-            <!-- two -->
-            <div class="panel two">
-               <h1 class="page-title">Activity</h1>
-               <!-- tabs -->
-               <div class="tab-selector">
-                  <div class="tab highlighted"><p>Front Door</p></div>
-                  <div class="tab"><p>Garage</p></div>
-                  <div class="tab"><p>Lounge</p></div>
-                  <div class="tab"><p>Back Door</p></div>
-                  <div class="tab add"><h1>+</h1></div>
-               </div>
-               <div class="tab-selector-dropdown">
-                  <h3 class="off">Front Door</h3>
-                  <div>
-                     <img src="./images/dropdown-icon.svg" alt="" />
-                  </div>
-               </div>
-
-               <!-- live screen -->
-               <div class="live-screen block-1 shadow2">
-                  <div class="live-indicator">
-                     <div></div>
-                     <span>Live</span>
-                  </div>
-                  <img class="lock-icon" src="./images/lock-blue-icon.svg" alt="" />
-                  <img class="live-video" src="./images/camera-dashboard.png" alt="" />
-               </div>
-
-               <!-- live activity -->
-               <div class="live-activity block-1 shadow2">
-                  <img src="./images/graph.png" alt="" />
-               </div>
-            </div>
-
-            <!-- three -->
-            <div class="panel three">
-               <h1 class="page-title">Controls</h1>
-               <!-- panic -->
-               <a href="google.com" class="button panic shadow2">
-                  <div>
-                     <img src="./images/panic-icon.svg" alt="" />
-                     <h1 class="bold-white">Panic</h1>
-                  </div>
-               </a>
-
-               <!-- security mode -->
-               <div class="security-mode block-1 shadow2">
-                  <h3>Security mode</h3>
-                  <h1 class="blue-accent">Away</h1>
-                  <div class="buttons">
-                     <img src="./images/unlock-mode.svg" alt="" />
-                     <img src="./images/lock-mode.svg" alt="" />
-                     <img src="./images/night-mode.svg" alt="" />
-                     <img src="./images/home-mode.svg" alt="" />
-                     <div class="backdrop shadow-inset">
-                        <img src="./images/away-mode.svg" alt="" />
-                     </div>
-                  </div>
-               </div>
-               <!-- manual controls -->
-               <div class="manual-controls block-1 shadow2">
-                  <h3>Manual controls</h3>
-
-                  <!-- toggle switch -->
-                  <div class="switch-container">
-                     <div class="toggle-switch-label">
-                        <h3 class="off">Lights</h3>
-                        <div>
-                           <img src="./images/light-icon.svg" alt="" />
-
-                           <div class="toggle-switch shadow-inset">
-                              <div class="circle"></div>
-                           </div>
-                        </div>
-                     </div>
-                     <!-- toggle switch -->
-                     <div class="toggle-switch-label">
-                        <h3 class="off">Smart Locks</h3>
-                        <div>
-                           <img src="./images/lock-icon.svg" alt="" />
-
-                           <div class="toggle-switch shadow-inset on">
-                              <div class="circle"></div>
-                           </div>
-                        </div>
-                     </div>
-                  </div>
-               </div>
-
-               <!-- intercom -->
-               <div class="intercom block-1 shadow2">
-                  <h3>Intercom</h3>
-                  <h3 class="off">Press & Hold</h3>
-                  <div class="button fat blue-accent"><h3>Push to Talk</h3></div>
-               </div>
-            </div>
-
-            <!-- four -->
-            <div class="panel block-1 four shadow2">
-               <img src="./images/graphic-dashboard.png" alt="" />
-               <div class="info">
-                  <h1 class="page-title">Nice! <br />Everything is working</h1>
-                  <p class="blue">In case of emergency hold down Panic button for 3 seconds to alert law enforcement</p>
-                  <div class="dots-container">
-                     <div class="dots"></div>
-                     <div class="dots"></div>
-                     <div class="dots"></div>
-                  </div>
-               </div>
-            </div>
-         </div>
-         
-      </main>
-      <!-- script -->
-      <script src="./js/navbar.js"></script>
+      <div>
+         <h1>Tiaka - IoT App Interface</h1>
+         <h2>Home security automation</h2>
+         <a href="./sites/ENG/index.html" target="_blank"><span>English Version</span></a>
+         <a href="./sites/MAORI/index.html" target="_blank"><span>Te Reo Maori Version</span></a>
+      </div>
    </body>
 </html>

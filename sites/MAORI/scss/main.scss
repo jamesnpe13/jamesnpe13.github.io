@@ -1,0 +1,25 @@
+// base
+@use "./base/base";
+@use "./base/reset";
+
+// components
+@use "./components/header";
+@use "./components/navbar";
+@use "./components/ov-cell";
+@use "./components/block1";
+@use "./components/toggle-switch-label";
+@use "./components/tabs";
+
+@use "./components/buttons";
+@use "./components/cell";
+@use "./components/gallery-cell";
+
+// layouts
+@use "./base/layouts";
+
+// pages
+@use "./pages/dashboard";
+@use "./pages/locations";
+@use "./pages/device";
+@use "./pages/device-2";
+@use "./pages/recordings";

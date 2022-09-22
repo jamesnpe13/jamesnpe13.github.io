@@ -1,0 +1,100 @@
+@use "../abstracts/debug" as db;
+@use "../abstracts/colors" as cols;
+@use "../abstracts/gapsets" as gaps;
+@use "../abstracts/variables" as vars;
+@use "../abstracts/effects" as fx;
+@use "../abstracts/mixins" as mx;
+@use "../abstracts//mediaqueries" as mq;
+
+main.device {
+   .content-container {
+      height: 100vh;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: auto 1fr;
+      grid-template-areas:
+         "head    head"
+         "one     two";
+      @media screen and (max-width: mq.$bp2) {
+         height: auto;
+         grid-template-columns: 1fr;
+         grid-template-rows: auto 400px 1fr;
+         grid-template-areas:
+            "head"
+            "one"
+            "two";
+      }
+   }
+   // allocation
+   header {
+      grid-area: head;
+   }
+   .panel.one {
+      grid-area: one;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      gap: 20px;
+      img {
+         width: 500px;
+         transform: translateX(-5%);
+      }
+      h1 {
+         width: 100%;
+         font-size: 1.5em;
+      }
+      @media screen and (max-width: mq.$bp2) {
+         padding: 20px;
+         h1 {
+            width: 80%;
+         }
+         img {
+            width: 200px;
+         }
+      }
+   }
+   .panel.two {
+      grid-area: two;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 50px;
+      .block-1 {
+         display: flex;
+         flex-direction: column;
+         gap: 15px;
+      }
+      .manage-devices {
+         display: flex;
+         align-items: center;
+         justify-content: center;
+         gap: 15px;
+         .circle {
+            width: 20px;
+            height: 20px;
+            border-radius: 100%;
+            background-color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            h3 {
+               color: cols.$grey-1;
+            }
+         }
+      }
+
+      .button-container-2 {
+         margin-top: 60px;
+         display: flex;
+         justify-content: space-between;
+         gap: 20px;
+         & > .button {
+            width: 100%;
+         }
+      }
+   }
+   
+}

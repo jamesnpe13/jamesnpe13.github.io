@@ -1,0 +1,77 @@
+@use "../abstracts/colors" as cols;
+
+$base-size: 14px;
+$base-heading: 14px;
+$medium-heading: 20px;
+$large-heading: 28px;
+$button: 14px;
+
+$base-weight: 400;
+$semibold: 600;
+$bold: 1000;
+
+@mixin typeset-1 {
+     font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+
+     //  default
+     font-size: $base-size;
+     color: cols.$white;
+     font-weight: $base-weight;
+
+     //  base
+     p {
+          font-size: $base-size;
+          color: cols.$white;
+          font-weight: $base-weight;
+
+          &.off {
+               color: cols.$white-off;
+          }
+          &.blue {
+               font-size: 1.2em;
+               color: cols.$blue-off;
+          }
+     }
+     h1 {
+        font-weight: $semibold;
+        font-size: $large-heading;
+          &.page-title {
+               color: cols.$blue-off;
+          }
+          &.white-bold {
+               color: cols.$white;
+               font-size: calc($large-heading + 0.8em);
+          }
+          &.blue-accent {
+               color: cols.$blue-accent;
+          }
+          &.infographic {
+               color: cols.$blue-off;
+               font-weight: $base-weight;
+          }
+     }
+     h2 {
+          font-size: $medium-heading;
+          color: cols.$white;
+          font-weight: $base-weight;
+          &.off {
+               font-size: $medium-heading;
+               color: cols.$white-off;
+          }
+     }
+     h3 {
+          font-size: $base-heading;
+          color: cols.$white;
+
+          &.off {
+               color: cols.$white-off;
+          }
+     }
+     span {
+          &.button {
+               font-size: $base-size;
+               color: cols.$white;
+               font-weight: $semibold;
+          }
+     }
+}

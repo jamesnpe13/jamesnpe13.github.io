@@ -1,0 +1,40 @@
+* {
+   padding: 0;
+   margin: 0;
+   box-sizing: border-box;
+}
+.container {
+   width: 100vw;
+   height: 100vh;
+   display: grid;
+   place-content: center;
+}
+.button {
+   width: 200px;
+   height: 100px;
+   background-color: green;
+}
+
+.box {
+   width: 200px;
+   height: 200px;
+   background: red;
+   opacity: 0;
+}
+.anim {
+   animation: reveal 2s;
+}
+@keyframes reveal {
+   from {
+      display: none;
+      opacity: 0;
+   }
+   1% {
+      display: block;
+      opacity: 0;
+   }
+   to {
+      display: none;
+      opacity: 100%;
+   }
+}

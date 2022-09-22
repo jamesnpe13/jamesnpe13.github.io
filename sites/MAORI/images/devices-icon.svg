@@ -1,0 +1,17 @@
+<svg id="icon-holder" xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 36 36">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: rgba(255,255,255,0);
+      }
+
+      .cls-2 {
+        fill: #fff;
+      }
+    </style>
+  </defs>
+  <rect id="Rectangle_25" data-name="Rectangle 25" class="cls-1" width="36" height="36"/>
+  <g id="devices" transform="translate(5 9.333)">
+    <path id="Icon_material-devices" data-name="Icon material-devices" class="cls-2" d="M4.333,8.167h19.5V6H4.333A2.173,2.173,0,0,0,2.167,8.167V20.083H0v3.25H15.167v-3.25H4.333Zm20.583,2.167h-6.5a1.087,1.087,0,0,0-1.083,1.083V22.25a1.087,1.087,0,0,0,1.083,1.083h6.5A1.087,1.087,0,0,0,26,22.25V11.417A1.087,1.087,0,0,0,24.917,10.333Zm-1.083,9.75H19.5V12.5h4.333Z" transform="translate(0 -6)"/>
+  </g>
+</svg>

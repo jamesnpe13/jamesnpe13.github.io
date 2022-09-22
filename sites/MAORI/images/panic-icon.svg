@@ -1,0 +1,10 @@
+<svg id="panic" xmlns="http://www.w3.org/2000/svg" width="26" height="23.997" viewBox="0 0 26 23.997">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #ff8080;
+      }
+    </style>
+  </defs>
+  <path id="Icon_ionic-ios-warning" data-name="Icon ionic-ios-warning" class="cls-1" d="M14.68,5.494,3.612,25.691A1.9,1.9,0,0,0,5.306,28.5H27.447a1.9,1.9,0,0,0,1.694-2.806L18.067,5.494A1.94,1.94,0,0,0,14.68,5.494Zm2.793,8.38L17.248,21.5H15.5l-.225-7.624Zm-1.1,11.774a1.151,1.151,0,1,1,1.194-1.15A1.161,1.161,0,0,1,16.374,25.648Z" transform="translate(-3.375 -4.5)"/>
+</svg>

@@ -1,0 +1,18 @@
+@mixin dropshadow-close {
+   box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.46);
+}
+@mixin dropshadow-far {
+   box-shadow: 4px 4px 18px #00000075;
+}
+@mixin dropshadow-inset {
+   box-shadow: inset 4px 4px 5px rgba(0, 0, 0, 0.349);
+}
+.shadow1 {
+   @include dropshadow-close();
+}
+.shadow2 {
+   @include dropshadow-far();
+}
+.shadow-inset {
+   @include dropshadow-inset();
+}

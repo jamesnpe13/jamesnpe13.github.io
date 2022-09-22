@@ -1,0 +1,10 @@
+<svg id="Icon_feather-message-square" data-name="Icon feather-message-square" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #c5c9cc;
+      }
+    </style>
+  </defs>
+  <path id="Icon_feather-message-square-2" data-name="Icon feather-message-square" class="cls-1" d="M24.5,17.833a2.222,2.222,0,0,1-2.222,2.222H8.944L4.5,24.5V6.722A2.222,2.222,0,0,1,6.722,4.5H22.278A2.222,2.222,0,0,1,24.5,6.722Z" transform="translate(-4.5 -4.5)"/>
+</svg>

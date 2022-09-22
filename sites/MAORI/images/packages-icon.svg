@@ -1,0 +1,10 @@
+<svg id="Icon_feather-package" data-name="Icon feather-package" xmlns="http://www.w3.org/2000/svg" width="20" height="22.214" viewBox="0 0 20 22.214">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #c5c9cc;
+      }
+    </style>
+  </defs>
+  <path id="Path_2" data-name="Path 2" class="cls-1" d="M24.5,18.554V9.666a2.222,2.222,0,0,0-1.111-1.922L15.611,3.3a2.223,2.223,0,0,0-2.222,0L5.611,7.744A2.222,2.222,0,0,0,4.5,9.666v8.887a2.222,2.222,0,0,0,1.111,1.922l7.778,4.444a2.223,2.223,0,0,0,2.222,0l7.778-4.444A2.222,2.222,0,0,0,24.5,18.554Z" transform="translate(-4.5 -3.003)"/>
+</svg>

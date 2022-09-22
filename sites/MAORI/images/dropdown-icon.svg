@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #c5c9cc;
+      }
+    </style>
+  </defs>
+  <path id="Icon_ionic-ios-arrow-dropdown-circle" data-name="Icon ionic-ios-arrow-dropdown-circle" class="cls-1" d="M0,8A8,8,0,1,0,8,0,8,8,0,0,0,0,8ZM11.119,6.331a.745.745,0,0,1,1.05,0,.733.733,0,0,1,.215.523.746.746,0,0,1-.219.527L8.538,11a.741.741,0,0,1-1.023-.023L3.835,7.3a.742.742,0,0,1,1.05-1.05L8,9.4Z" transform="translate(16 16) rotate(180)"/>
+</svg>

@@ -1,0 +1,17 @@
+@use "../abstracts/debug" as db;
+@use "../abstracts/colors" as cols;
+@use "../abstracts/gapsets" as gaps;
+@use "../abstracts/variables" as vars;
+@use "../abstracts/effects" as fx;
+@use "../abstracts/mixins" as mx;
+@use "../abstracts//mediaqueries" as mq;
+@use "../base/typography" as type;
+
+body {
+     @include type.typeset-1();
+     background-color: cols.$grey-1;
+}
+a {
+     text-decoration: none;
+     color: inherit;
+}

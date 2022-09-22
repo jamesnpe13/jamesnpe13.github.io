@@ -1,0 +1,64 @@
+@use "../abstracts/debug" as db;
+@use "../abstracts/colors" as cols;
+@use "../abstracts/gapsets" as gaps;
+@use "../abstracts/variables" as vars;
+@use "../abstracts/effects" as fx;
+@use "../abstracts/mixins" as mx;
+@use "../abstracts//mediaqueries" as mq;
+
+main.recordings {
+   .content-container {
+      height: auto;
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: auto auto auto;
+      grid-template-areas:
+         "head"
+         "one"
+         "two";
+      @media screen and (max-width: mq.$bp2) {
+         grid-template-areas:
+            "head"
+            "one"
+            "two";
+      }
+   }
+   // allocation
+   header {
+      grid-area: head;
+   }
+   .panel.one {
+      grid-area: one;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      gap: 20px;
+      padding: 60px 0;
+      img {
+         width: 300px;
+         transform: translateX(10%);
+      }
+      h1 {
+         width: 100%;
+         font-size: 1.5em;
+      }
+      @media screen and (max-width: mq.$bp2) {
+         padding: 20px;
+         h1 {
+            width: 80%;
+         }
+         img {
+            width: 200px;
+         }
+      }
+   }
+   .panel.two {
+      min-height: 100px;
+      display: flex;
+      flex-direction: column;
+      gap: 100px;
+   }
+}
+ 
