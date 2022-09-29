@@ -1,0 +1,13 @@
+$white: white;
+$color-1: #FD3692;
+$color-2: #F4357F;
+$color-3: #BF2D85;
+$color-4: #89268C;
+$color-5: #541E92;
+
+$grey-1: #2F2E30;
+$grey-2: #817F80;
+
+$primary: $color-2;
+$primary-v2: mix($color-2, white, 80%);
+$background-color: mix($grey-1, black, 60%);

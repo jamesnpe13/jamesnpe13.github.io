@@ -1,0 +1,92 @@
+@use "../abstracts/colors" as cols;
+@use "../abstracts/typography" as type;
+// ==================================================================
+// ======================= EFFECTS  =================================
+// ==================================================================
+
+
+
+// ==================================================================
+// ======================= GLOBAL RESETS ============================
+// ==================================================================
+
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+body {
+   background-color: cols.$background-color;
+   @include type.font-raleway();
+   color: white;
+   p {
+      line-height: 1.8rem;
+   }
+}
+body::-webkit-scrollbar {
+   display: none;
+}
+
+// ==================================================================
+// ======================= SECTION DEFAULTS =========================
+// ==================================================================
+
+section {
+    // * {
+    //     outline: 1px solid rgba(255, 255, 255, 0.096);
+    // }
+   .content-container {
+      width: 80%;
+      height: max-content;
+      margin-inline: auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+   }
+   .panel {
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      & > img {
+         width: 100%;
+      }
+   }
+   article {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      max-width: 100%;
+      gap: 50px;
+      h2 {
+         color: cols.$white;
+         font-size: type.$fontsize-max-header;
+      }
+   }
+
+   &.full {
+      .content-container {
+         width: 100%;
+         height: 100vh;
+      }
+   }
+   &.h-split {
+      .content-container {
+         display: grid;
+         grid-template-columns: 1fr 1fr;
+         gap: 50px;
+      }
+   }
+}
+
+// ==================================================================
+// ======================= HERO SECTION =============================
+// ==================================================================
+section.hero {
+   img {
+      width: 50vw;
+   }
+}
+.panel .beam {
+   width: 50%;
+}
