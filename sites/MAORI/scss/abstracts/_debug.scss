@@ -1,9 +1,0 @@
-@mixin self {
-     outline: 1px solid red;
-}
-
-@mixin all {
-     * {
-          outline: 1px solid yellow;
-     }
-}
