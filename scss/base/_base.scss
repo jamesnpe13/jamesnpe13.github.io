@@ -4,8 +4,6 @@
 // ======================= EFFECTS  =================================
 // ==================================================================
 
-
-
 // ==================================================================
 // ======================= GLOBAL RESETS ============================
 // ==================================================================
@@ -15,10 +13,32 @@
    padding: 0;
    box-sizing: border-box;
 }
+article {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   max-width: 100%;
+   gap: 50px;
+}
+h2 {
+   color: cols.$white;
+   font-size: type.$fontsize-max-header;
+   @include type.font-raleway();
+}
+h3 {
+   color: cols.$white;
+   font-size: type.$fontsize-small-header;
+   @include type.font-raleway();
+}
+p span {
+   color: white;
+   font-weight: 500;
+}
 body {
    background-color: cols.$background-color;
-   @include type.font-raleway();
-   color: white;
+   @include type.font-roboto();
+   font-size: 1.2em;
+   color: rgb(195, 195, 195);
    p {
       line-height: 1.8rem;
    }
@@ -35,9 +55,9 @@ section {
    &:nth-of-type(even) {
       background-color: mix(black, grey, 82%);
    }
-    // * {
-    //     outline: 1px solid rgba(255, 255, 255, 0.096);
-    // }
+   // * {
+   //     outline: 1px solid rgba(255, 255, 255, 0.096);
+   // }
    .content-container {
       padding-top: 100px;
       padding-bottom: 100px;
@@ -45,6 +65,7 @@ section {
       height: max-content;
       margin-inline: auto;
       display: flex;
+      flex-direction: row;
       align-items: center;
       justify-content: center;
    }
@@ -55,17 +76,6 @@ section {
       justify-content: center;
       & > img {
          width: 100%;
-      }
-   }
-   article {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      max-width: 100%;
-      gap: 50px;
-      h2 {
-         color: cols.$white;
-         font-size: type.$fontsize-max-header;
       }
    }
 
@@ -82,6 +92,12 @@ section {
          gap: 50px;
       }
    }
+   &.gallery {
+      .content-container {
+         display: grid;
+         grid-template-columns: repeat(1, 1fr);
+      }
+   }
 }
 
 // ==================================================================
@@ -92,12 +108,70 @@ section.hero {
       width: 50vw;
    }
 }
+// ==================================================================
+// ======================= ABILITIES SECTION ========================
+// ==================================================================
+section.abilities {
+   .content-container {
+      flex-direction: column;
+   }
+   article > .grid-container {
+      display: grid;
+      gap: 80px;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-areas:
+         "ux   ui    coding"
+         "gd   mg    apps";
+      .ux {
+         grid-area: ux;
+      }
+      .ui {
+         grid-area: ui;
+      }
+      .coding {
+         grid-area: coding;
+      }
+      .gd {
+         grid-area: gd;
+      }
+      .mg {
+         grid-area: mg;
+      }
+      .apps {
+         grid-area: apps;
+      }
+      .text-container {
+         display: flex;
+         flex-direction: column;
+         gap: 10px;
+      }
+      .apps > .grid-container {
+         display: flex;
+         flex-wrap: wrap;
+         flex-direction: row;
+         gap: 10px;
+      }
+   }
+   .box {
+      width: 50px;
+      height: 50px;
+      background: grey;
+   }
+}
+
+// ==================================================================
+// ======================= OTHERS SECTION ===========================
+// ==================================================================
 .panel .beam {
    width: 100%;
    height: 100%;
-   object-fit: cover;
+   object-fit: contain;
 }
-@media screen and (max-width:1250px) {
+
+// ==================================================================
+// ======================= MEDIA QUERY SECTION ======================
+// ==================================================================
+@media screen and (max-width: 1250px) {
    section.hero {
       img {
          width: 92vw;

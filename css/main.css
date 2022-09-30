@@ -4,10 +4,36 @@
   box-sizing: border-box;
 }
 
+article {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 100%;
+  gap: 50px;
+}
+
+h2 {
+  color: white;
+  font-size: 70px;
+  font-family: "Raleway", sans-serif;
+}
+
+h3 {
+  color: white;
+  font-size: 20px;
+  font-family: "Raleway", sans-serif;
+}
+
+p span {
+  color: white;
+  font-weight: 500;
+}
+
 body {
   background-color: #1c1c1d;
-  font-family: "Raleway", sans-serif;
-  color: white;
+  font-family: "Roboto", sans-serif;
+  font-size: 1.2em;
+  color: rgb(195, 195, 195);
 }
 body p {
   line-height: 1.8rem;
@@ -29,6 +55,7 @@ section .content-container {
   height: max-content;
   margin-inline: auto;
   display: flex;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
 }
@@ -41,17 +68,6 @@ section .panel {
 section .panel > img {
   width: 100%;
 }
-section article {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  max-width: 100%;
-  gap: 50px;
-}
-section article h2 {
-  color: white;
-  font-size: 70px;
-}
 section.full .content-container {
   width: 100%;
   height: 100vh;
@@ -61,16 +77,64 @@ section.h-split .content-container {
   grid-template-columns: 1fr 1fr;
   gap: 50px;
 }
+section.gallery .content-container {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+}
 
 section.hero img {
   width: 50vw;
 }
 
+section.abilities .content-container {
+  flex-direction: column;
+}
+section.abilities article > .grid-container {
+  display: grid;
+  gap: 80px;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-areas: "ux   ui    coding" "gd   mg    apps";
+}
+section.abilities article > .grid-container .ux {
+  grid-area: ux;
+}
+section.abilities article > .grid-container .ui {
+  grid-area: ui;
+}
+section.abilities article > .grid-container .coding {
+  grid-area: coding;
+}
+section.abilities article > .grid-container .gd {
+  grid-area: gd;
+}
+section.abilities article > .grid-container .mg {
+  grid-area: mg;
+}
+section.abilities article > .grid-container .apps {
+  grid-area: apps;
+}
+section.abilities article > .grid-container .text-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+section.abilities article > .grid-container .apps > .grid-container {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  gap: 10px;
+}
+section.abilities .box {
+  width: 50px;
+  height: 50px;
+  background: grey;
+}
+
 .panel .beam {
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 
 @media screen and (max-width: 1250px) {
