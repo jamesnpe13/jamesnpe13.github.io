@@ -1,0 +1,20 @@
+{
+   "repositories": [
+      {
+         "name": "Tiaki - Home Security",
+         "URL": "./tiaki"
+      },
+      {
+         "name": "Colour Game",
+         "URL": "./colour-game"
+      },
+      {
+         "name": "e-Book Store",
+         "URL": "./e-book-store"
+      },
+      {
+         "name": "Car Rental App",
+         "URL": "./car-rental"
+      }
+   ]
+}
