@@ -15,6 +15,10 @@
       {
          "name": "Car Rental App",
          "URL": "./car-rental"
+      },
+      {
+         "name": "Corrupt Coffee",
+         "URL": "./corrupt-coffee"
       }
    ]
 }
