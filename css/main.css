@@ -25,13 +25,13 @@ body {
 }
 
 h1 {
-  color: rgb(100, 115, 222);
+  color:  #568eb5;
   margin-bottom: 15px;
 }
 
 button {
   border: none;
-  background-color: rgb(100, 115, 222);
+  background-color: #568eb5;
   padding-block: 15px;
   padding-inline: 20px;
   color: white;
