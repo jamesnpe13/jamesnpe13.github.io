@@ -35,11 +35,15 @@ function updateUI(repoData) {
 function createButton(repoData) {
    var linksContainer = document.querySelector(".container");
    var repoLink = document.createElement("button");
+   // var thumbnail = document.createElement("img");
    var repoName = document.createElement("span");
    linksContainer.appendChild(repoLink);
+   // repoLink.appendChild(thumbnail);
    repoLink.appendChild(repoName);
 
    repoLink.className = "repo-link";
+   // thumbnail.className = "thumbnail";
+   // thumbnail.src = repoData.image_URL
    repoLink.setAttribute("data-link", repoData.URL);
    repoName.textContent = repoData.name;
 }

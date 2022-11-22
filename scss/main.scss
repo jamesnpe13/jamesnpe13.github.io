@@ -53,7 +53,7 @@ button {
    font-size: 1em;
    text-align: left;
    border-radius: 8px;
-   transition: 0.5s cubic-bezier(.15,1.81,.14,.96);
+   transition: 0.5s cubic-bezier(0.15, 1.81, 0.14, 0.96);
    cursor: pointer;
 
    &:hover {

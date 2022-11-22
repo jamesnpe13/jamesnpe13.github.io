@@ -2,23 +2,28 @@
    "repositories": [
       {
          "name": "Tiaki - Home Security",
-         "URL": "./tiaki"
+         "URL": "./tiaki",
+         "image_URL": "../images/tiaki-thumbnail.png"
       },
       {
          "name": "Colour Game",
-         "URL": "./colour-game"
+         "URL": "./colour-game",
+         "image_URL": "../images/colour-game-thumbnail.png"
       },
       {
          "name": "e-Book Store",
-         "URL": "./e-book-store"
+         "URL": "./e-book-store",
+         "image_URL": "../images/e-book-store-thumbnail.png"
       },
       {
          "name": "Car Rental App",
-         "URL": "./car-rental"
+         "URL": "./car-rental",
+         "image_URL": "../images/car-rental-thumbnail.png"
       },
       {
          "name": "Corrupt Coffee",
-         "URL": "./corrupt-coffee"
+         "URL": "./corrupt-coffee",
+         "image_URL": "../images/corrupt-coffee-thumbnail.png"
       }
    ]
 }
