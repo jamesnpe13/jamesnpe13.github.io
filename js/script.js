@@ -1,3 +1,6 @@
+window.addEventListener("DOMContentLoaded", () => {
+   
+
 var buttons = document.querySelectorAll(".repo-link");
 
 for (var button of buttons) {
@@ -7,3 +10,4 @@ for (var button of buttons) {
       location.href = repoLink;
    });
 }
+})
