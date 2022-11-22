@@ -1,13 +1,14 @@
 window.addEventListener("DOMContentLoaded", () => {
    
 
-var buttons = document.querySelectorAll(".repo-link");
+var buttons = document.querySelectorAll("button");
 
 for (var button of buttons) {
    button.addEventListener("click", (event) => {
-      var repoLink = button.getAttribute("data-link");
+      var thisButton = event.target.closest("button");
+      var repoLink = thisButton.getAttribute("data-link");
       
-      console.log(button);
+      console.log(thisButton);
       console.log(repoLink);
       
       if(repoLink) window.open(repoLink, "_blank");
