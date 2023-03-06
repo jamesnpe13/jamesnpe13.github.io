@@ -1,6 +1,11 @@
 {
    "repositories": [
       {
+         "name": "To-do App - React",
+         "URL": "./todo-react",
+         "image_URL": "../images/tiaki-thumbnail.png"
+      },
+      {
          "name": "Tiaki - Home Security",
          "URL": "./tiaki",
          "image_URL": "../images/tiaki-thumbnail.png"
