@@ -1,0 +1,10 @@
+{
+   "homepage": "https://jamesnpe13.github.io/",
+   "devDependencies": {
+      "gh-pages": "^5.0.0"
+   },
+   "scripts": {
+      "predeploy": "npm run build",
+      "deploy": "gh-pages -d build"
+   }
+}
