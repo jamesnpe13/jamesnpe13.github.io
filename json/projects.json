@@ -29,6 +29,11 @@
          "name": "Corrupt Coffee",
          "URL": "./corrupt-coffee",
          "image_URL": "../images/corrupt-coffee-thumbnail.png"
+      },
+      {
+         "name": "BlazeFitness - Wordpress site",
+         "URL": "https://james.elazegui.yoobeestudent.ac.nz",
+         "image_URL": "../images/corrupt-coffee-thumbnail.png"
       }
    ]
 }
